@@ -1,0 +1,202 @@
+{
+    "en": {
+        "setting_language": {
+            "text": "Change language",
+            "fail": "Fail!",
+            "success": "Success."
+        },
+        "appearance": {
+            "text": "Appearance",
+            "device": "Device",
+            "light": "Light",
+            "dark": "Dark"
+        },
+        "language": {
+            "text": "Language",
+            "vn": "Vietnamese",
+            "en": "English (UK)"
+        },
+        "setting": {
+            "text": "Setting"
+        },
+        "help_center": {
+            "text": "Help Center"
+        },
+        "sign_in": {
+            "text": "Sign In"
+        },
+        "sign_up": {
+            "text": "Sign Up"
+        },
+        "logout": {
+            "text": "Logout"
+        },
+        "account_setting": {
+            "text": "Account Info"
+        },
+        "payment_setting": {
+            "text": "Payment Info"
+        },
+        "cart": {
+            "text": "Your Cart"
+        },
+        "wishlist": {
+            "text": "Wishlist"
+        },
+        "search": {
+            "text": "Search",
+            "placeholder": "Search something..."
+        },
+        "notification": {
+            "text": "Notification"
+        },
+        "home": {
+            "text": "Home"
+        },
+        "categories": {
+            "text": "Categories"
+        },
+        "sale_product": {
+            "text": "Sales Product"
+        },
+        "lucky_box": {
+            "text": "Lucky Box"
+        },
+        "giveaway": {
+            "text": "Give Away"
+        },
+        "friend_referral": {
+            "text": "Friend Referral"
+        },
+        "enter_gift_code": {
+            "text": "Have gift code?"
+        },
+        "history_item_view": {
+            "text": "Item History"
+        },
+        "ticket_register": {
+            "text": "Register Ticket"
+        },
+        "showtimes": {
+            "text": "Showtimes"
+        },
+        "events": {
+            "text": "Events"
+        },
+        "welcome": {
+            "text": "Welcome"
+        },
+        "mute": {
+            "text": "Mute"
+        },
+        "unmute": {
+            "text": "Unmute"
+        },
+        "block_trailer": {
+            "text": "Block Trailer"
+        },
+        "unblock_trailer": {
+            "text": "Watch Trailer"
+        }
+    },
+    "vn": {
+        "setting_language": {
+            "text": "Thay đổi ngôn ngữ",
+            "fail": "Không thành công!",
+            "success": "Thành công."
+        },
+        "appearance": {
+            "text": "Giao diện",
+            "device": "Hệ thống",
+            "light": "Sáng",
+            "dark": "Tối"
+        },
+        "language": {
+            "text": "Ngôn ngữ",
+            "vn": "Tiếng Việt",
+            "en": "Tiếng Anh (UK)"
+        },
+        "setting": {
+            "text": "Cài đặt"
+        },
+        "help_center": {
+            "text": "Trung tâm trợ giúp"
+        },
+        "sign_in": {
+            "text": "Đăng nhập"
+        },
+        "sign_up": {
+            "text": "Đăng ký"
+        },
+        "logout": {
+            "text": "Đăng xuất"
+        },
+        "account_setting": {
+            "text": "Thông tin tài khoản"
+        },
+        "payment_setting": {
+            "text": "Quản lý thanh toán"
+        },
+        "cart": {
+            "text": "Giỏ hàng"
+        },
+        "wishlist": {
+            "text": "Danh sách yêu thích"
+        },
+        "search": {
+            "text": "Tìm kiếm",
+            "placeholder": "Hãy tìm gì đó..."
+        },
+        "notification": {
+            "text": "Thông báo"
+        },
+        "home": {
+            "text": "Trang chủ"
+        },
+        "categories": {
+            "text": "Danh mục"
+        },
+        "sale_product": {
+            "text": "Giảm giáaa"
+        },
+        "lucky_box": {
+            "text": "Hộp may mắn"
+        },
+        "giveaway": {
+            "text": "Give Away"
+        },
+        "friend_referral": {
+            "text": "Giới thiệu bạn bè"
+        },
+        "enter_gift_code": {
+            "text": "Bạn có mã giảm giá?"
+        },
+        "history_item_view": {
+            "text": "Sản phẩm đã xem"
+        },
+        "ticket_register": {
+            "text": "Đăng ký vé"
+        },
+        "showtimes": {
+            "text": "Lịch chiếu"
+        },
+        "events": {
+            "text": "Sự kiện"
+        },
+        "welcome": {
+            "text": "Giới thiệu"
+        },
+        "mute": {
+            "text": "Mở âm"
+        },
+        "unmute": {
+            "text": "Tắt âm"
+        },
+        "block_trailer": {
+            "text": "Tắt trailer"
+        },
+        "unblock_trailer": {
+            "text": "Mở trailer"
+        }
+    }
+}

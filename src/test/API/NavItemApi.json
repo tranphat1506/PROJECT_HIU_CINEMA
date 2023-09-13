@@ -1,0 +1,27 @@
+{
+    "1": {
+        "title": "home",
+        "direct_url": "/home",
+        "icon": "bi-house-fill"
+    },
+    "2": {
+        "title": "ticket_register",
+        "direct_url": "/ticket",
+        "icon": "bi-ticket-perforated-fill"
+    },
+    "3": {
+        "title": "showtimes",
+        "direct_url": "/showtimes",
+        "icon": "bi-film"
+    },
+    "4": {
+        "title": "events",
+        "direct_url": "/events",
+        "icon": "bi-calendar-day-fill"
+    },
+    "5": {
+        "title": "welcome",
+        "direct_url": "/welcome",
+        "icon": "bi-info-circle-fill"
+    }
+}
