@@ -6,6 +6,9 @@
         background-color: transparent;
     }
 }
+#copyright .hiulogo__title {
+    color: inherit !important;
+}
 :not(.dark).onTop {
     .hiulogo__title {
         color: #fff;

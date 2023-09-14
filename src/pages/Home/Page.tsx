@@ -1,4 +1,4 @@
-import MovieTrailer from '@/components/Movie';
+import MovieTrailer from '@/components/Movie/MovieTrailer';
 import React from 'react';
 
 export interface PageProps {
@@ -11,9 +11,10 @@ const Home: React.FC<HomePageProps> = ({
 }) => {
     document.title = title;
     return (
-        <div className="dark:bg-[#141414] bg-[#FFECD7] h-[1000px]">
+        <>
             <MovieTrailer />
-        </div>
+            <div className="h-[500px] rounded-b-xl"></div>
+        </>
     );
 };
 

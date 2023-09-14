@@ -9,7 +9,7 @@ const TopNav = () => {
         <div className="w-full flex items-center font-MP_Regular justify-between h-12">
             <div className="flex flex-row items-center">
                 <Menu className="dark:text-white" />
-                <HIULogo />
+                <HIULogo className="lg:flex hidden" />
             </div>
             <div className="flex flex-row gap-4 items-center">
                 <span className="sm:flex hidden gap-4">
