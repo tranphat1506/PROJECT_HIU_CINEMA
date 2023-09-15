@@ -71,7 +71,7 @@ const MovieTrailer = () => {
         };
     }, [timeVotingLeft]);
     return (
-        <header className="w-full h-full">
+        <div className="w-full h-full">
             <div
                 onMouseEnter={(e) => {
                     if (videoBlocked) return;
@@ -154,14 +154,13 @@ const MovieTrailer = () => {
                             bè và từ từ chuẩn bị cho tuổi trưởng thành.
                         </div>
                         <span className="mb-3 font-MP_Bold flex flex-row gap-2 sm:text-xl md:text-2xl lg:-text-3xl items-end uppercase">
-                            <span>Số lượt vote: {totalVotes}</span>
-                            <span className="text-white px-2 border-l-2">
-                                #1
+                            <span>
+                                Ngày khởi chiếu: Thứ 6, 15/09/2023 18:00 PM
                             </span>
                         </span>
                         <span className="mb-3 flex flex-row gap-2 sm:text-xl md:text-2xl lg:-text-3xl flex-wrap">
                             <span className="font-MP_Regular">
-                                Thời gian còn lại:
+                                Thời gian mua vé còn lại:
                             </span>
                             <span className="font-TitanOne">
                                 {formatDay(timeVotingLeft)}
@@ -169,14 +168,14 @@ const MovieTrailer = () => {
                         </span>
                         <div className="mb-3 flex flex-row font-MP_Medium gap-3 items-center justify-between flex-wrap">
                             <div className="inline-flex flex-row gap-5">
-                                <button className="capitalize sm:p-2 sm:text-md px-3 p-1 bg-white rounded-md text-[#141414] hover:opacity-90">
-                                    Vote là gì ?
-                                </button>
                                 <button
                                     onClick={handleVoting}
                                     className="capitalize sm:p-2 sm:text-md px-3 p-1 bg-red-netflix rounded-md text-[#fff] hover:opacity-90"
                                 >
-                                    Vote
+                                    Mua vé ngay
+                                </button>
+                                <button className="capitalize sm:p-2 sm:text-md px-3 p-1 bg-white rounded-md text-[#141414] hover:opacity-90">
+                                    Xem chi tiết
                                 </button>
                             </div>
                             <div className="inline-flex flex-row gap-5">
@@ -223,7 +222,7 @@ const MovieTrailer = () => {
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
     );
 };
 
