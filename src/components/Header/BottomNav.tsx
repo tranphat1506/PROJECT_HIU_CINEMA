@@ -15,25 +15,20 @@ const BottomNav = () => {
     const params = window.location.pathname;
     const text = useLanguage();
     return (
-        <div className="lg:flex hidden w-full justify-center">
+        <div
+            id="bottom-nav"
+            className="lg:flex hidden visible w-full justify-center"
+        >
             {Object.keys(NavItemApi).map((id) => {
-                // @ts-ignore
-                const navDetails: NavItemStructure = NavItemApi[id];
+                const navDetails: NavItemStructure =
+                    NavItemApi[id as keyof typeof NavItemApi];
                 const title_Text: string = text(navDetails.title);
                 const to: string = navDetails.direct_url;
                 const icon: string = navDetails.icon;
                 return (
-                    <Link
-                        key={id}
-                        to={to}
-                        className="relative px-4"
-                        style={{ backgroundColor: 'inherit' }}
-                    >
+                    <Link key={id} to={to} className="relative px-4">
                         {to === params && (
-                            <span
-                                className="w-4 h-4 flex absolute z-10 rounded-full top-1 left-[5px]"
-                                style={{ backgroundColor: 'inherit' }}
-                            ></span>
+                            <span className="ticket-circle w-4 h-4 flex absolute z-10 rounded-full top-1 left-[5px] bg-[#FFECD7] dark:bg-[#141414]"></span>
                         )}
                         <MenuItem
                             className={clsx('!p-0 !px-2 !rounded-sm', {
@@ -70,10 +65,7 @@ const BottomNav = () => {
                             }
                         />
                         {to === params && (
-                            <span
-                                className="w-4 h-4 flex absolute z-10 rounded-full top-1 right-[5px]"
-                                style={{ backgroundColor: 'inherit' }}
-                            ></span>
+                            <span className="ticket-circle w-4 h-4 flex absolute z-10 rounded-full top-1 right-[5px] bg-[#FFECD7] dark:bg-[#141414]"></span>
                         )}
                     </Link>
                 );

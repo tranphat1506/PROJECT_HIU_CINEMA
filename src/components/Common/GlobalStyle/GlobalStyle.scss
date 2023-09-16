@@ -1,9 +1,12 @@
 #header {
-    transition: background-color 0.5s ease;
+    transition: background-color 0.1s ease;
 }
 .onTop {
     #header {
         background-color: transparent;
+    }
+    #bottom-nav {
+        visibility: hidden;
     }
 }
 #copyright .hiulogo__title {
