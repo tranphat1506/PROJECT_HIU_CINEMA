@@ -6,6 +6,9 @@ export const formatDay = (time: number): string => {
     const hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((time % (1000 * 60)) / 1000);
+    if (days < 0 && hours < 0 && minutes < 0 && seconds < 0) {
+        return '00' + 'd:' + '00' + 'h:' + '00' + 'm:' + '00' + 's';
+    }
     return (
         formatTwoDigits(days) +
         'd:' +

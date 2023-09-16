@@ -5,7 +5,6 @@ import FontIcon from '../Common/FontIcon';
 import { Tooltip } from '@mui/material';
 import { TbDeviceTv, TbDeviceTvOff } from 'react-icons/tb';
 import useLanguage from '@/hooks/useLanguage';
-import Container from '../Common/Container';
 const MovieTrailer = () => {
     const text = useLanguage();
     const mute_Text = text('mute');
@@ -169,14 +168,14 @@ const MovieTrailer = () => {
                         </span>
                         <div className="mb-3 flex flex-row font-MP_Medium gap-3 items-center justify-between flex-wrap">
                             <div className="inline-flex flex-row gap-5">
-                                <button className="capitalize sm:p-2 sm:text-md px-3 p-1 bg-white rounded-md text-[#141414] hover:opacity-90">
-                                    Vote là gì ?
-                                </button>
                                 <button
                                     onClick={handleVoting}
                                     className="capitalize sm:p-2 sm:text-md px-3 p-1 bg-red-netflix rounded-md text-[#fff] hover:opacity-90"
                                 >
-                                    Vote
+                                    Mua vé
+                                </button>
+                                <button className="capitalize sm:p-2 sm:text-md px-3 p-1 bg-white rounded-md text-[#141414] hover:opacity-90">
+                                    Xem chi tiết
                                 </button>
                             </div>
                             <div className="inline-flex flex-row gap-5">
