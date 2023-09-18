@@ -1,0 +1,14 @@
+{
+    "currentShowing": {
+        "id": "current_showing",
+        "title": "Phim đang chiếu tại rạp",
+        "movieList": [
+            { "src": "island.webp" },
+            { "src": "island.webp" },
+            { "src": "island.webp" },
+            { "src": "island.webp" },
+            { "src": "island.webp" },
+            { "src": "island.webp" }
+        ]
+    }
+}

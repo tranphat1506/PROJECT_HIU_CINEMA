@@ -112,6 +112,9 @@
         },
         "jobs": {
             "text": "Jobs"
+        },
+        "explore_all": {
+            "text": "Explore All"
         }
     },
     "vn": {
@@ -227,6 +230,9 @@
         },
         "jobs": {
             "text": "Tuyển dụng"
+        },
+        "explore_all": {
+            "text": "Xem tất cả"
         }
     }
 }
