@@ -6,7 +6,7 @@ import Menu from './Menu';
 
 const TopNav = () => {
     return (
-        <div className="w-full flex items-center font-MP_Regular justify-between h-12">
+        <div className="mb-2 w-full flex items-center font-MP_Regular justify-between h-12">
             <div className="flex flex-row items-center">
                 <Menu className="dark:text-white" />
                 <HIULogo className="lg:flex hidden" />

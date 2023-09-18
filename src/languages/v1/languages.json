@@ -97,6 +97,21 @@
         },
         "unblock_trailer": {
             "text": "Watch Trailer"
+        },
+        "cookie_policy": {
+            "text": "Cookie Policy"
+        },
+        "term_of_use": {
+            "text": "Term Of Use"
+        },
+        "privacy": {
+            "text": "Privacy Policy"
+        },
+        "contact": {
+            "text": "Contact Us"
+        },
+        "jobs": {
+            "text": "Jobs"
         }
     },
     "vn": {
@@ -197,6 +212,21 @@
         },
         "unblock_trailer": {
             "text": "Mở trailer"
+        },
+        "cookie_policy": {
+            "text": "Chính sách Cookie"
+        },
+        "term_of_use": {
+            "text": "Điều khoản sử dụng"
+        },
+        "privacy": {
+            "text": "Quyền riêng tư"
+        },
+        "contact": {
+            "text": "Liên hệ chúng tôi"
+        },
+        "jobs": {
+            "text": "Tuyển dụng"
         }
     }
 }

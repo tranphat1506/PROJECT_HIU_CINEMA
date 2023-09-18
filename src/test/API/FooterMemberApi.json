@@ -1,0 +1,30 @@
+{
+    "1": {
+        "title": "cookie_policy",
+        "to": "/help/cookie-policy"
+    },
+    "2": {
+        "title": "welcome",
+        "to": "/welcome"
+    },
+    "3": {
+        "title": "help_center",
+        "to": "/help"
+    },
+    "4": {
+        "title": "term_of_use",
+        "to": "/help/term"
+    },
+    "5": {
+        "title": "privacy",
+        "to": "/help/privacy"
+    },
+    "6": {
+        "title": "contact",
+        "to": "/help/contact"
+    },
+    "7": {
+        "title": "jobs",
+        "to": "/jobs"
+    }
+}

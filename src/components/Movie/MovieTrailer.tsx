@@ -5,7 +5,6 @@ import FontIcon from '../Common/FontIcon';
 import { Tooltip } from '@mui/material';
 import { TbDeviceTv, TbDeviceTvOff } from 'react-icons/tb';
 import useLanguage from '@/hooks/useLanguage';
-import Container from '../Common/Container';
 const MovieTrailer = () => {
     const text = useLanguage();
     const mute_Text = text('mute');
