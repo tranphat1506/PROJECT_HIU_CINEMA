@@ -1,14 +1,21 @@
 {
     "currentShowing": {
         "id": "current_showing",
+        "to": "/currentShowing",
         "title": "Phim đang chiếu tại rạp",
         "movieList": [
             { "src": "island.webp" },
+            { "src": "pastlives.webp" },
+            { "src": "taboo.jpg" },
             { "src": "island.webp" },
+            { "src": "pastlives.webp" },
+            { "src": "taboo.jpg" },
             { "src": "island.webp" },
+            { "src": "pastlives.webp" },
+            { "src": "taboo.jpg" },
             { "src": "island.webp" },
-            { "src": "island.webp" },
-            { "src": "island.webp" }
+            { "src": "pastlives.webp" },
+            { "src": "taboo.jpg" }
         ]
     }
 }
