@@ -184,19 +184,14 @@ const MovieSlider: React.FC<MovieSliderProps> = ({ path }) => {
                 }}
                 onTouchEnd={(e) => {
                     if (!slidingPosition.current) return;
-                    const minWidthSlideThreshold = 100; // 100px
-                    const isSlideToLeft =
-                        e.changedTouches[0].clientX - slidingPosition.current >=
-                        minWidthSlideThreshold;
-
-                    if (isSlideToLeft) {
+                    const minWidthSlideThreshold = 50; // 50px
+                    const slideSpacing =
+                        e.changedTouches[0].clientX - slidingPosition.current;
+                    if (slideSpacing >= minWidthSlideThreshold) {
                         handleScrollLeft(sliderApi.id)();
                         return;
                     }
-                    const isSlideToRight =
-                        slidingPosition.current - e.changedTouches[0].clientX >=
-                        minWidthSlideThreshold;
-                    if (isSlideToRight) {
+                    if (slideSpacing <= -minWidthSlideThreshold) {
                         handleScrollRight(sliderApi.id)();
                         return;
                     }
