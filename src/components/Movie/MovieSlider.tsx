@@ -1,6 +1,6 @@
 import { Skeleton } from '@mui/material';
 import clsx from 'clsx';
-import { useEffect, useRef, useState } from 'react';
+import { memo, useEffect, useRef, useState } from 'react';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import MovieSliderApi from '@/test/API/MovieSliderApi.json';
 import useLanguage from '@/hooks/useLanguage';
@@ -20,7 +20,7 @@ export type TypeSlider = {
     id: string;
     to: string;
     title: string;
-    movieList: any[];
+    movieList: MovieItem[];
     totalItem: number;
     totalSlide: number;
     currentSlide: number;
@@ -29,7 +29,9 @@ export type TypeSlider = {
         right: boolean;
     };
 };
-
+type MovieItem = {
+    src: string;
+};
 export const MovieSliderSkeleton = () => {
     return (
         <div className="w-full h-auto mb-6">
@@ -68,7 +70,6 @@ const MovieSlider: React.FC<MovieSliderProps> = ({ path }) => {
         setHoverSlider(state);
     };
     console.log('re render movie slider');
-
     useEffect(() => {
         const fakeFetchId = setTimeout(() => {
             const fakeApi =
@@ -87,13 +88,15 @@ const MovieSlider: React.FC<MovieSliderProps> = ({ path }) => {
                 currentSlide: 0,
             };
             setSliderApi(completeFakeApi);
-        }, 5000);
+        }, 2000);
 
         return () => {
             clearTimeout(fakeFetchId);
         };
     }, []);
+    // wait for fetching Movie Slider
     if (!sliderApi) return <MovieSliderSkeleton />;
+
     // Scroll event movieCard
     const handleScrollLeft = (id: string) => () => {
         if (!sliderApi.canScroll.left) return;
@@ -187,7 +190,6 @@ const MovieSlider: React.FC<MovieSliderProps> = ({ path }) => {
                         minWidthSlideThreshold;
 
                     if (isSlideToLeft) {
-                        console.log('left');
                         handleScrollLeft(sliderApi.id)();
                         return;
                     }
@@ -195,7 +197,6 @@ const MovieSlider: React.FC<MovieSliderProps> = ({ path }) => {
                         slidingPosition.current - e.changedTouches[0].clientX >=
                         minWidthSlideThreshold;
                     if (isSlideToRight) {
-                        console.log('right');
                         handleScrollRight(sliderApi.id)();
                         return;
                     }
@@ -207,33 +208,7 @@ const MovieSlider: React.FC<MovieSliderProps> = ({ path }) => {
                         'movie-slider flex flex-nowrap gap-1 transition-transform w-full',
                     )}
                 >
-                    {[1, 2, 3].map((loopSliderId) => {
-                        console.log('r');
-
-                        if (loopSliderId !== 3)
-                            return sliderApi.movieList.map(
-                                (movieApi, index) => {
-                                    return (
-                                        <SlideItem
-                                            movieApi={movieApi}
-                                            key={index}
-                                            id={index}
-                                        />
-                                    );
-                                },
-                            );
-                        return sliderApi.movieList
-                            .slice(0, 2)
-                            .map((movieApi, index) => {
-                                return (
-                                    <SlideItem
-                                        movieApi={movieApi}
-                                        key={index}
-                                        id={index}
-                                    />
-                                );
-                            });
-                    })}
+                    <MovieSliderContainer movieItemList={sliderApi.movieList} />
                 </div>
 
                 <div
@@ -266,5 +241,39 @@ const MovieSlider: React.FC<MovieSliderProps> = ({ path }) => {
         </div>
     );
 };
+
+interface MovieSliderContainerProps {
+    movieItemList: MovieItem[];
+}
+const MovieSliderContainer: React.FC<MovieSliderContainerProps> = memo(
+    ({ movieItemList }) => {
+        return (
+            <>
+                {[1, 2, 3].map((loopSliderId) => {
+                    console.log('movie-item');
+                    if (loopSliderId !== 3)
+                        return movieItemList.map((movieApi, index) => {
+                            return (
+                                <SlideItem
+                                    movieApi={movieApi}
+                                    key={index}
+                                    id={index}
+                                />
+                            );
+                        });
+                    return movieItemList.slice(0, 2).map((movieApi, index) => {
+                        return (
+                            <SlideItem
+                                movieApi={movieApi}
+                                key={index}
+                                id={index}
+                            />
+                        );
+                    });
+                })}
+            </>
+        );
+    },
+);
 
 export default MovieSlider;
