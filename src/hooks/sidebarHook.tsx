@@ -6,7 +6,6 @@ export const useDefaultSidebarState = () => {
     return useState<boolean>(false);
 };
 export const defaultToggleSidebar =
-    (open: boolean, setState: Dispatch<SetStateAction<boolean>>) =>
-    (event: React.MouseEvent | React.KeyboardEvent) => {
+    (open: boolean, setState: Dispatch<SetStateAction<boolean>>) => () => {
         setState(open);
     };

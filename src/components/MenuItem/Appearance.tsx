@@ -24,7 +24,7 @@ interface AppearanceMenuItemProps {
 const AppearanceMenuItem: React.FC<AppearanceMenuItemProps> = ({
     handleClick,
 }) => {
-    const [setting, dispatchSetting] = useGlobalSetting();
+    const [setting, _] = useGlobalSetting();
     const text = useLanguage();
     let appearance_Text = text('appearance');
     let appearanceMode_Text = text('appearance', setting?.appearance);

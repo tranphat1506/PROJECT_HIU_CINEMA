@@ -10,7 +10,7 @@ interface AuthMenuBoxProps {
 }
 const AuthMenuBox: React.FC<AuthMenuBoxProps> = ({ handleClick }) => {
     const text = useLanguage();
-    const [setting, dispatchSetting] = useGlobalSetting();
+    const [setting, _] = useGlobalSetting();
     if (!setting?.currentUser.is_logging) return <></>;
     /* Text display */
     let accountSetting_Text = text('account_setting');

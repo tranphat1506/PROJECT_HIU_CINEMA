@@ -1,5 +1,5 @@
 import { IconButton, Tooltip, Menu, MenuItem, Stack } from '@mui/material';
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { RiMoonFoggyFill } from 'react-icons/ri';
 import { BsFillSunFill } from 'react-icons/bs';
 import { TbDeviceDesktop } from 'react-icons/tb';
@@ -16,12 +16,12 @@ const Appearance = () => {
     let openButtonRef = useRef<HTMLButtonElement | null>(null);
 
     const [open, setOpen] = useState<boolean>(false);
-    const toggleOpenMenu = (status: boolean) => (event: React.MouseEvent) => {
+    const toggleOpenMenu = (status: boolean) => () => {
         return setOpen(status);
     };
 
     const handleChangeAppearance =
-        (mode: 'device' | 'light' | 'dark') => (event: React.MouseEvent) => {
+        (mode: 'device' | 'light' | 'dark') => () => {
             // @ts-ignore
             return settingDispatch(changeAppearance(mode));
         };

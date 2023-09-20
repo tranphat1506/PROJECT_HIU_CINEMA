@@ -2,13 +2,7 @@
 import { useCallback } from 'react';
 
 import { RxHamburgerMenu } from 'react-icons/rx';
-import {
-    Box,
-    Divider,
-    IconButton,
-    MenuItem as MUI_MenuItem,
-    MenuList,
-} from '@mui/material';
+import { Box, IconButton, MenuList } from '@mui/material';
 import NavSidebar from '../Common/NavSidebar';
 import {
     defaultToggleSidebar,

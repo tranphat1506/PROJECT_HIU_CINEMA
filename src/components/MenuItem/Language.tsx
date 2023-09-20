@@ -1,10 +1,4 @@
-import {
-    Box,
-    IconButton,
-    Stack,
-    MenuItem as MUI_MenuItem,
-    MenuList,
-} from '@mui/material';
+import { Box, IconButton, Stack, MenuList } from '@mui/material';
 import { MouseEventHandler } from 'react';
 import { supportLanguage } from '@/languages';
 import useGlobalSetting from '@/hooks/useGlobalSetting';
@@ -19,7 +13,7 @@ interface LanguageMenuItemProps {
     handleClick: MouseEventHandler;
 }
 const LanguageMenuItem: React.FC<LanguageMenuItemProps> = ({ handleClick }) => {
-    const [setting, dispatchSetting] = useGlobalSetting();
+    const [setting, _] = useGlobalSetting();
     const text = useLanguage();
     let language_Text = text('language');
     let languageMode_Text = text('language', setting?.language);

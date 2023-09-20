@@ -8,31 +8,28 @@ const Header = () => {
     const HeaderRef = useRef<HTMLDivElement>(null);
     const lastScroll = useRef<number>(0);
     useEffect(() => {
-        window.addEventListener(
-            'scroll',
-            (event: HTMLElementEventMap['scroll']) => {
-                if (HeaderRef.current?.clientHeight !== undefined) {
-                    if (
-                        window.scrollY - lastScroll.current <
-                        -HeaderRef.current?.clientHeight
-                    ) {
-                        lastScroll.current = window.scrollY;
-                        return document
-                            .querySelector('html')
-                            ?.classList.add('onTop');
-                    }
-                    if (
-                        window.scrollY > HeaderRef.current?.clientHeight &&
-                        window.scrollY > lastScroll.current
-                    ) {
-                        lastScroll.current = window.scrollY;
-                        return document
-                            .querySelector('html')
-                            ?.classList.remove('onTop');
-                    }
+        window.addEventListener('scroll', () => {
+            if (HeaderRef.current?.clientHeight !== undefined) {
+                if (
+                    window.scrollY - lastScroll.current <
+                    -HeaderRef.current?.clientHeight
+                ) {
+                    lastScroll.current = window.scrollY;
+                    return document
+                        .querySelector('html')
+                        ?.classList.add('onTop');
                 }
-            },
-        );
+                if (
+                    window.scrollY > HeaderRef.current?.clientHeight &&
+                    window.scrollY > lastScroll.current
+                ) {
+                    lastScroll.current = window.scrollY;
+                    return document
+                        .querySelector('html')
+                        ?.classList.remove('onTop');
+                }
+            }
+        });
 
         return () => {};
     }, []);

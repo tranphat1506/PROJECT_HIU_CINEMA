@@ -8,6 +8,7 @@ type Route = {
     props?: any;
 };
 const publicRoutes: Router = [
+    { path: '/', page: HomePage, layout: HomeLayout },
     { path: '/home', page: HomePage, layout: HomeLayout },
 ];
 

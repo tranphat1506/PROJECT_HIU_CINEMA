@@ -7,11 +7,10 @@ import useLanguage from '@/hooks/useLanguage';
 const Language = () => {
     const [setting, settingDispatch] = useGlobalSetting();
     const text = useLanguage();
-    const handleChangeLanguage =
-        (newLanguage: string) => (event: React.MouseEvent<HTMLElement>) => {
-            // @ts-ignore
-            settingDispatch(changeLanguage(newLanguage));
-        };
+    const handleChangeLanguage = (newLanguage: string) => () => {
+        // @ts-ignore
+        settingDispatch(changeLanguage(newLanguage));
+    };
     return (
         <div>
             {Object.keys(supportLanguage).map(

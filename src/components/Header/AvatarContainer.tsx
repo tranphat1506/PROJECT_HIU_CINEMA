@@ -91,7 +91,7 @@ const AvatarContainer: React.FC<AvatarContainerProps> = ({
     position = 'header',
 }) => {
     const text = useLanguage();
-    const [setting, settingDispatch] = useGlobalSetting();
+    const [setting, _] = useGlobalSetting();
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const mainMenuButtonRef = useRef<HTMLButtonElement>(null);
     const [menuId, setMenuId] = useState<number | null>(null);
@@ -102,16 +102,14 @@ const AvatarContainer: React.FC<AvatarContainerProps> = ({
     const handleClose = () => {
         setAnchorEl(null);
     };
-    const handleCloseSubMenu =
-        (back: boolean) => (event: React.MouseEvent<HTMLElement>) => {
-            if (back) setAnchorEl(mainMenuButtonRef.current);
-            setMenuId(null);
-        };
-    const handleOpenSubMenu =
-        (id: number | null) => (event: React.MouseEvent<HTMLElement>) => {
-            setMenuId(id);
-            setAnchorEl(null);
-        };
+    const handleCloseSubMenu = (back: boolean) => () => {
+        if (back) setAnchorEl(mainMenuButtonRef.current);
+        setMenuId(null);
+    };
+    const handleOpenSubMenu = (id: number | null) => () => {
+        setMenuId(id);
+        setAnchorEl(null);
+    };
     let accountSetting_Text = text('account_setting');
     if (position === 'header')
         return (
@@ -191,7 +189,9 @@ const AvatarContainer: React.FC<AvatarContainerProps> = ({
                         menuProps={
                             {
                                 open: menuId !== null,
-                                handleClose: handleCloseSubMenu(false),
+                                handleClose: handleCloseSubMenu(
+                                    false,
+                                ) as React.MouseEventHandler<HTMLElement>,
                                 animationFrom: 'right',
                             } as NavSidebarProps
                         }

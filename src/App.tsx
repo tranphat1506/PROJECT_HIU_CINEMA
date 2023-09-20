@@ -9,7 +9,7 @@ import {
     changeScreen,
 } from './contexts/setting/actions';
 function App() {
-    const [setting, settingDispatch] = useGlobalSetting();
+    const [_, settingDispatch] = useGlobalSetting();
 
     useEffect(() => {
         const getLanguage = window.localStorage.getItem('@language') || 'vn';

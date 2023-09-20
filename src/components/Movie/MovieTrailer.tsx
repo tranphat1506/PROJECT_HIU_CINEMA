@@ -38,21 +38,20 @@ const MovieTrailer = () => {
     const [videoBlocked, setVideoBlocked] = useState<boolean>(false);
     const [videoEnded, setVideoEnded] = useState<boolean>(true);
 
-    const toggleSetBlockTrailer =
-        (status: boolean) => (event?: React.MouseEvent) => {
-            if (!videoRef.current) return;
-            if (status) {
-                videoRef.current.currentTime = 0;
-                videoRef.current.pause();
-                setVideoBlocked(true);
-                handleSetVideoEnded(true);
-                return;
-            }
-            videoRef.current?.play();
-            setVideoBlocked(false);
-            handleSetVideoEnded(false);
+    const toggleSetBlockTrailer = (status: boolean) => () => {
+        if (!videoRef.current) return;
+        if (status) {
+            videoRef.current.currentTime = 0;
+            videoRef.current.pause();
+            setVideoBlocked(true);
+            handleSetVideoEnded(true);
             return;
-        };
+        }
+        videoRef.current?.play();
+        setVideoBlocked(false);
+        handleSetVideoEnded(false);
+        return;
+    };
     const handleSetVideoEnded = (state: boolean) => {
         return setVideoEnded(state);
     };
@@ -72,7 +71,7 @@ const MovieTrailer = () => {
     return (
         <div className="w-full h-full">
             <div
-                onMouseEnter={(e) => {
+                onMouseEnter={() => {
                     if (videoBlocked) return;
                     handleSetVideoEnded(false);
                     videoRef.current?.play();
@@ -107,7 +106,7 @@ const MovieTrailer = () => {
                         e.currentTarget.currentTime =
                             e.currentTarget.duration - 5;
                     }}
-                    onEnded={(e) => {
+                    onEnded={() => {
                         if (videoBlocked) return;
                         handleSetVideoEnded(true);
                         toggleSetBlockTrailer(true)();

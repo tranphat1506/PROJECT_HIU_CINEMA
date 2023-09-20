@@ -9,6 +9,9 @@ interface SlideItemProps {
 const SlideItem: React.FC<SlideItemProps> = ({ id, movieApi }) => {
     return (
         <span
+            onClick={() => {
+                console.log(id);
+            }}
             className={clsx(
                 'block text-white dark:bg-[#ffffff0e] bg-[#ffffff91] rounded-sm cursor-pointer select-none',
                 'min-h-[50%]', // height

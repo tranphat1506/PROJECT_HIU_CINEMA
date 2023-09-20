@@ -3,7 +3,7 @@ import { Box, IconButton } from '@mui/material';
 import PopperMenu from '../Common/PopperMenu';
 import { MouseEventHandler } from 'react';
 import { SlSettings } from 'react-icons/sl';
-import useGlobalSetting from '@/hooks/useGlobalSetting';
+// import useGlobalSetting from '@/hooks/useGlobalSetting';
 import { PopperMenuProps } from '../Common/PopperMenu';
 import MenuItem from './MenuItem';
 import useLanguage from '@/hooks/useLanguage';
@@ -12,7 +12,7 @@ interface SettingMenuItemProps {
     handleClick: MouseEventHandler;
 }
 const SettingMenuItem: React.FC<SettingMenuItemProps> = ({ handleClick }) => {
-    const [setting, dispatchSetting] = useGlobalSetting();
+    // const [setting, dispatchSetting] = useGlobalSetting();
     const text = useLanguage();
     let setting_Text = text('setting');
     return (

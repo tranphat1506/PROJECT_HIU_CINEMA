@@ -1,6 +1,6 @@
 import { Skeleton } from '@mui/material';
 import clsx from 'clsx';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import MovieSliderApi from '@/test/API/MovieSliderApi.json';
 import useLanguage from '@/hooks/useLanguage';
@@ -63,9 +63,12 @@ const MovieSlider: React.FC<MovieSliderProps> = ({ path }) => {
     const text = useLanguage();
     const [sliderApi, setSliderApi] = useState<TypeSlider | null>(null);
     const [hoverSlider, setHoverSlider] = useState(false);
+    const slidingPosition = useRef<number | null>(null);
     const toggleHoverSlider = (state: boolean) => () => {
         setHoverSlider(state);
     };
+    console.log('re render movie slider');
+
     useEffect(() => {
         const fakeFetchId = setTimeout(() => {
             const fakeApi =
@@ -172,18 +175,41 @@ const MovieSlider: React.FC<MovieSliderProps> = ({ path }) => {
                 {!hoverSlider && <BsChevronRight className="h-[1.5rem] ml-2" />}
             </Link>
 
-            <div className="movie-card mb-4 w-full overflow-hidden px-10 lg:px-20 relative">
+            <div
+                onTouchStart={(e) => {
+                    slidingPosition.current = e.touches[0].clientX;
+                }}
+                onTouchEnd={(e) => {
+                    if (!slidingPosition.current) return;
+                    const minWidthSlideThreshold = 100; // 100px
+                    const isSlideToLeft =
+                        e.changedTouches[0].clientX - slidingPosition.current >=
+                        minWidthSlideThreshold;
+
+                    if (isSlideToLeft) {
+                        console.log('left');
+                        handleScrollLeft(sliderApi.id)();
+                        return;
+                    }
+                    const isSlideToRight =
+                        slidingPosition.current - e.changedTouches[0].clientX >=
+                        minWidthSlideThreshold;
+                    if (isSlideToRight) {
+                        console.log('right');
+                        handleScrollRight(sliderApi.id)();
+                        return;
+                    }
+                }}
+                className="movie-card mb-4 w-full overflow-hidden px-10 lg:px-20 relative"
+            >
                 <div
                     className={clsx(
                         'movie-slider flex flex-nowrap gap-1 transition-transform w-full',
                     )}
-                    // style={{
-                    //     transform: `translateX(calc((-${getItemWidth(
-                    //         document.body.clientWidth,
-                    //     )} - 0.25rem) * ${sliderApi.totalItem}))`,
-                    // }}
                 >
                     {[1, 2, 3].map((loopSliderId) => {
+                        console.log('r');
+
                         if (loopSliderId !== 3)
                             return sliderApi.movieList.map(
                                 (movieApi, index) => {

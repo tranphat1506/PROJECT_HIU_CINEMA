@@ -1,6 +1,6 @@
-import MovieSlider, { TypeSlider } from '@/components/Movie/MovieSlider';
+import MovieSlider from '@/components/Movie/MovieSlider';
 import MovieTrailer from '@/components/Movie/MovieTrailer';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 export interface PageProps {
     title?: string;
 }
@@ -16,6 +16,9 @@ const HomePage: React.FC<HomePageProps> = ({
             <MovieTrailer />
             <div className="h-auto w-full font-MP_Medium">
                 <MovieSlider path="/currentShowing" />
+                <MovieSlider path="/c" />
+                <MovieSlider path="/c" />
+                <MovieSlider path="/c" />
                 <MovieSlider path="/c" />
                 <MovieSlider path="/c" />
                 <MovieSlider path="/c" />
