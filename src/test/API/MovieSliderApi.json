@@ -2,20 +2,73 @@
     "currentShowing": {
         "id": "current_showing",
         "to": "/currentShowing",
-        "title": "Phim đang chiếu tại rạp",
+        "title": { "text": "current_showing", "subText": "in_cinema" },
         "movieList": [
-            { "src": "island.webp" },
-            { "src": "pastlives.webp" },
-            { "src": "taboo.jpg" },
-            { "src": "island.webp" },
-            { "src": "pastlives.webp" },
-            { "src": "taboo.jpg" },
-            { "src": "island.webp" },
-            { "src": "pastlives.webp" },
-            { "src": "taboo.jpg" },
-            { "src": "island.webp" },
-            { "src": "pastlives.webp" },
-            { "src": "taboo.jpg" }
+            {
+                "id": "1",
+                "movieScale": "1",
+                "buyTicketSrc": "/buy/1",
+                "detailMovieSrc": "/movie/1",
+                "posterSrc": "/19to20/19to20-poster.jpg",
+                "backgroundSrc": "/19to20/19to20-background.jpg",
+                "movieTrailerSrc": "/19to20/19to20-trailer.mp4",
+                "movieTitle": "Mười chín sang hai mươi",
+                "movieTitleImgSrc": "/19to20/19to20-title.png",
+                "movieType": "Romance",
+                "movieDescription": "Mười Chín Sang Hai Mươi - 19/20 là chương trình sẽ theo sau những người thuộc thế hệ Z khi họ tận hưởng tuần cuối cùng ở tuổi 19 và tuần đầu tiên ở tuổi 20 sau khi đón giao năm 2023. Các thí sinh độc đáo sẽ kết thúc năm bằng việc dành thời gian với bạn bè và từ từ chuẩn bị cho tuổi trưởng thành."
+            },
+            {
+                "id": "2",
+                "movieScale": "1.5",
+                "buyTicketSrc": "/buy/2",
+                "detailMovieSrc": "/movie/2",
+                "posterSrc": "/thenun2/thenun2-poster.jpg",
+                "backgroundSrc": "/thenun2/thenun2-background.jpg",
+                "movieType": "Horror",
+                "movieTrailerSrc": "/thenun2/thenun2-trailer.mp4",
+                "movieTitle": "The Nun II",
+                "movieTitleImgSrc": "/thenun2/thenun2-title.png",
+                "movieDescription": "Là phần phim tiếp nối câu chuyện năm 2019 của The Nun, phim lấy bối cảnh nước Pháp năm 1956, cùng cái chết bí ẩn của một linh mục, một giai thoại đáng sợ và ám ảnh sẽ mở ra tiếp tục xoay quanh nhân vật chính - Sơ Irene. Liệu Sơ Irene có nhận ra, đây chính là hồn ma nữ tu Valak từng có cuộc chiến “sống còn” với cô không lâu trước đây."
+            },
+            {
+                "id": "3",
+                "movieScale": "1.2",
+                "buyTicketSrc": "/buy/3",
+                "detailMovieSrc": "/movie/3",
+                "posterSrc": "/island/island-poster.jpg",
+                "backgroundSrc": "/island/island-background.jpg",
+                "movieType": "Action, Korea",
+                "movieTrailerSrc": "/island/island-trailer.mp4",
+                "movieTitleImgSrc": "/island/island-title.png",
+                "movieTitle": "Island: Hòn đảo ma quái",
+                "movieDescription": "Hòn Đảo Ma Quái kể về Won Mi Ho là con gái duy nhất của cha cô, người điều hành tập đoàn Daehan. Thái độ kiêu ngạo và ích kỷ của cô đã khiến cô mắc phải một sai lầm lớn khiến cha cô tức giận và trục xuất cô đến đảo Jeju. Ở đó, cô được phân công làm giáo viên đạo đức trung học. Cô ấy không hề hay biết, hòn đảo là nơi ác quỷ lang thang tự do. Cô gặp những cá nhân khác trên đảo và cùng nhau, các nhân vật hợp lực để sống."
+            },
+            {
+                "id": "4",
+                "movieScale": "1.2",
+                "buyTicketSrc": "/buy/4",
+                "detailMovieSrc": "/movie/4",
+                "posterSrc": "/muoi/muoi-poster.jpg",
+                "backgroundSrc": "/muoi/muoi-background.jpg",
+                "movieType": "Horror, Vietnam",
+                "movieTrailerSrc": "/muoi/muoi-trailer.mp4",
+                "movieTitle": "Mười: Lời nguyền trở lại",
+                "movieTitleImgSrc": "/muoi/muoi-title.png",
+                "movieDescription": "Một giám tuyển nghệ thuật nọ gặp lại người bạn cũ ở một căn biệt thự biệt lập. Tại đó, họ phát hiện ra một bức chân dung bị nguyền rủa ẩn chứa một linh hồn độc ác."
+            },
+            {
+                "id": "5",
+                "movieScale": "1",
+                "buyTicketSrc": "/buy/5",
+                "detailMovieSrc": "/movie/5",
+                "posterSrc": "/pastlives/pastlives-poster.webp",
+                "backgroundSrc": "/pastlives/pastlives-background.jpg",
+                "movieType": "Romance, Korea",
+                "movieTrailerSrc": "/pastlives/pastlives-trailer.mp4",
+                "movieTitle": "Past Lives: Nhân Duyên",
+                "movieTitleImgSrc": "/pastlives/pastlives-title.png",
+                "movieDescription": "Past Lives (2023) - Hae Sung, Nora và Arthur đang ngồi ở quán bar trong khi một cặp đôi giấu mặt theo dõi họ và đoán mối quan hệ của họ với nhau. Hai mươi bốn năm trước ở Seoul , Na Young và Hae Sung là bạn cùng lớp cùng nhau đi bộ về nhà mỗi ngày. Gia đình Na Young di cư đến Toronto , nơi cô đổi tên thành Nora. Mười hai năm sau, Hae Sung đã hoàn thành nghĩa vụ quân sự và Nora đã di cư đến thành phố New York . Một ngày nọ, Nora và mẹ cô nói chuyện điện thoại trong khi tìm kiếm các bạn cùng lớp từ Hàn Quốc. Khi tra cứu Hae Sung, cô thấy anh đã bình luận trên một bài đăng trên Facebook rằng anh đang tìm Na Young mà không nhận ra cô đã đổi tên. Họ kết nối lại và nói chuyện qua Skype , đồng thời cả hai đều đề nghị người kia đến thăm họ, mặc dù cả hai đều không thể cam kết, vì Nora sắp tham gia khóa tu dành cho nhà văn và Hae Sung đang chuyển đến Trung Quốc để trao đổi ngôn ngữ. Nora nói với Hae Sung rằng họ nên ngừng nói chuyện một lúc vì cô ấy muốn tập trung nghiêm túc vào việc viết lách."
+            }
         ]
     }
 }

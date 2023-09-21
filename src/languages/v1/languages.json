@@ -115,6 +115,17 @@
         },
         "explore_all": {
             "text": "Explore All"
+        },
+        "buy_ticket": {
+            "text": "Buy Ticket",
+            "now": "Buy Ticket Now"
+        },
+        "current_showing": {
+            "text": "Now Showing",
+            "in_cinema": "Now Showing In HIU Cinema"
+        },
+        "fullscreen": {
+            "text": "Fullscreen"
         }
     },
     "vn": {
@@ -232,7 +243,18 @@
             "text": "Tuyển dụng"
         },
         "explore_all": {
-            "text": "Xem tất cả"
+            "text": "Xem chi tiết"
+        },
+        "buy_ticket": {
+            "text": "Mua vé",
+            "now": "Mua vé ngay"
+        },
+        "current_showing": {
+            "text": "Đang chiếu",
+            "in_cinema": "Phim đang chiếu tại rạp"
+        },
+        "fullscreen": {
+            "text": "Toàn màn hình"
         }
     }
 }

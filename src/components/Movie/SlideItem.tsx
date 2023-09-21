@@ -1,17 +1,27 @@
 import { Skeleton } from '@mui/material';
 import clsx from 'clsx';
-import { memo } from 'react';
+import { memo, useEffect } from 'react';
+import { MovieItem } from './MovieSlider';
 
 interface SlideItemProps {
     id?: string | number;
-    movieApi?: any;
+    movieApi?: MovieItem;
+    handleSetVideoDisplay?: React.Dispatch<
+        React.SetStateAction<MovieItem | undefined>
+    >;
 }
-const SlideItem: React.FC<SlideItemProps> = ({ id, movieApi }) => {
+const SlideItem: React.FC<SlideItemProps> = ({
+    id,
+    movieApi,
+    handleSetVideoDisplay,
+}) => {
+    useEffect(() => {
+        if (id === 0 && handleSetVideoDisplay) {
+            handleSetVideoDisplay(movieApi);
+        }
+    }, []);
     return (
         <span
-            onClick={() => {
-                console.log(id);
-            }}
             className={clsx(
                 'block text-white dark:bg-[#ffffff0e] bg-[#ffffff91] rounded-sm cursor-pointer select-none',
                 'min-h-[50%]', // height
@@ -20,9 +30,12 @@ const SlideItem: React.FC<SlideItemProps> = ({ id, movieApi }) => {
         >
             {movieApi ? (
                 <img
-                    src={movieApi.src || ''}
+                    src={movieApi.posterSrc}
                     className="object-cover object-center w-full h-full rounded-sm"
-                    style={{ pointerEvents: 'none' }}
+                    onClick={() => {
+                        if (!handleSetVideoDisplay) return;
+                        handleSetVideoDisplay(movieApi);
+                    }}
                     onError={(e) => {
                         e.currentTarget.remove();
                     }}

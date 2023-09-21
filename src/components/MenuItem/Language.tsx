@@ -53,6 +53,7 @@ const LanguageSubMenu: React.FC<LanguageSubMenuProps> = ({
             // @ts-ignore
             dispatchSetting(changeLanguage(newLanguage));
             handleBack(event);
+            window.location.reload();
         };
     return (
         <>

@@ -19,7 +19,7 @@ const splitTotalSlide = (deviceWidth: number, totalItem: number): number => {
 export type TypeSlider = {
     id: string;
     to: string;
-    title: string;
+    title: { text: string; subText: string };
     movieList: MovieItem[];
     totalItem: number;
     totalSlide: number;
@@ -29,8 +29,18 @@ export type TypeSlider = {
         right: boolean;
     };
 };
-type MovieItem = {
-    src: string;
+export type MovieItem = {
+    id: string | number;
+    buyTicketSrc: string;
+    detailMovieSrc: string;
+    posterSrc: string;
+    backgroundSrc: string;
+    movieTrailerSrc: string;
+    movieScale: string;
+    movieTitle: string;
+    movieTitleImgSrc: string;
+    movieType: string;
+    movieDescription: string;
 };
 export const MovieSliderSkeleton = () => {
     return (
@@ -60,8 +70,14 @@ export const MovieSliderSkeleton = () => {
 };
 interface MovieSliderProps {
     path?: string;
+    handleSetMovieDisplay?: React.Dispatch<
+        React.SetStateAction<MovieItem | undefined>
+    >;
 }
-const MovieSlider: React.FC<MovieSliderProps> = ({ path }) => {
+const MovieSlider: React.FC<MovieSliderProps> = ({
+    path,
+    handleSetMovieDisplay,
+}) => {
     const text = useLanguage();
     const [sliderApi, setSliderApi] = useState<TypeSlider | null>(null);
     const [hoverSlider, setHoverSlider] = useState(false);
@@ -69,7 +85,6 @@ const MovieSlider: React.FC<MovieSliderProps> = ({ path }) => {
     const toggleHoverSlider = (state: boolean) => () => {
         setHoverSlider(state);
     };
-    console.log('re render movie slider');
     useEffect(() => {
         const fakeFetchId = setTimeout(() => {
             const fakeApi =
@@ -161,7 +176,7 @@ const MovieSlider: React.FC<MovieSliderProps> = ({ path }) => {
                 to={sliderApi.to}
                 className="cursor-pointer capitalize text-xl dark:text-white mb-2 inline-flex items-end mx-5 lg:mx-10"
             >
-                {sliderApi.title}
+                {text(sliderApi.title.text, sliderApi.title.subText)}
                 <span
                     className={clsx(
                         'text-sm inline-flex items-center w-0 invisible ml-2 text-ellipsis overflow-hidden whitespace-nowrap',
@@ -182,16 +197,18 @@ const MovieSlider: React.FC<MovieSliderProps> = ({ path }) => {
                 onTouchStart={(e) => {
                     slidingPosition.current = e.touches[0].clientX;
                 }}
-                onTouchEnd={(e) => {
+                onTouchMove={(e) => {
                     if (!slidingPosition.current) return;
                     const minWidthSlideThreshold = 50; // 50px
                     const slideSpacing =
                         e.changedTouches[0].clientX - slidingPosition.current;
                     if (slideSpacing >= minWidthSlideThreshold) {
+                        slidingPosition.current = null;
                         handleScrollLeft(sliderApi.id)();
                         return;
                     }
                     if (slideSpacing <= -minWidthSlideThreshold) {
+                        slidingPosition.current = null;
                         handleScrollRight(sliderApi.id)();
                         return;
                     }
@@ -203,13 +220,18 @@ const MovieSlider: React.FC<MovieSliderProps> = ({ path }) => {
                         'movie-slider flex flex-nowrap gap-1 transition-transform w-full',
                     )}
                 >
-                    <MovieSliderContainer movieItemList={sliderApi.movieList} />
+                    {handleSetMovieDisplay && (
+                        <MovieSliderContainer
+                            movieItemList={sliderApi.movieList}
+                            handleSetVideoDisplay={handleSetMovieDisplay}
+                        />
+                    )}
                 </div>
 
                 <div
                     onClick={handleScrollLeft(sliderApi.id)}
                     className={clsx(
-                        'bg-[#1a1a1aea] text-white cursor-pointer absolute top-0 left-0 px-[0.625rem] md:px-[0.35rem] min-[480px]:px-[0.5rem] lg:px-[1.5rem] rounded-r-sm h-full inline-flex items-center text-2xl',
+                        'bg-[#1a1a1a98] text-white cursor-pointer absolute top-0 left-0 px-[0.625rem] md:px-[0.35rem] min-[480px]:px-[0.5rem] lg:px-[1.5rem] rounded-r-sm h-full inline-flex items-center text-2xl',
                         'opacity-0',
                         {
                             '!opacity-100':
@@ -222,7 +244,7 @@ const MovieSlider: React.FC<MovieSliderProps> = ({ path }) => {
                 <div
                     onClick={handleScrollRight(sliderApi.id)}
                     className={clsx(
-                        'bg-[#1A1A1AEA] text-white cursor-pointer absolute top-0 right-0 px-[0.625rem] md:px-[0.35rem] min-[480px]:px-[0.5rem] lg:px-[1.5rem] rounded-l-sm h-full inline-flex items-center text-2xl',
+                        'bg-[#1a1a1a98] text-white cursor-pointer absolute top-0 right-0 px-[0.625rem] md:px-[0.35rem] min-[480px]:px-[0.5rem] lg:px-[1.5rem] rounded-l-sm h-full inline-flex items-center text-2xl',
                         'opacity-0',
                         {
                             '!opacity-100':
@@ -239,13 +261,15 @@ const MovieSlider: React.FC<MovieSliderProps> = ({ path }) => {
 
 interface MovieSliderContainerProps {
     movieItemList: MovieItem[];
+    handleSetVideoDisplay: React.Dispatch<
+        React.SetStateAction<MovieItem | undefined>
+    >;
 }
 const MovieSliderContainer: React.FC<MovieSliderContainerProps> = memo(
-    ({ movieItemList }) => {
+    ({ movieItemList, handleSetVideoDisplay }) => {
         return (
             <>
                 {[1, 2, 3].map((loopSliderId) => {
-                    console.log('movie-item');
                     if (loopSliderId !== 3)
                         return movieItemList.map((movieApi, index) => {
                             return (
@@ -253,6 +277,9 @@ const MovieSliderContainer: React.FC<MovieSliderContainerProps> = memo(
                                     movieApi={movieApi}
                                     key={index}
                                     id={index}
+                                    handleSetVideoDisplay={
+                                        handleSetVideoDisplay
+                                    }
                                 />
                             );
                         });
@@ -262,6 +289,7 @@ const MovieSliderContainer: React.FC<MovieSliderContainerProps> = memo(
                                 movieApi={movieApi}
                                 key={index}
                                 id={index}
+                                handleSetVideoDisplay={handleSetVideoDisplay}
                             />
                         );
                     });
