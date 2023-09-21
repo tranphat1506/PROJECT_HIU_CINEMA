@@ -107,6 +107,15 @@ const HomeAd: React.FC<HomeAdProps> = ({
                                 className="w-full h-auto object-contain rounded-md mb-2 max-w-[400px]"
                             />
                             <span className="flex w-auto justify-between font-MP_Regular gap-2 flex-wrap">
+                                <button
+                                    onClick={handleOpenAd}
+                                    className="inline-flex items-center max-[480px]:text-lg capitalize px-3 p-1 text-[#fff] dark:bg-white dark:text-[#141414] rounded-full bg-[#141414] hover:opacity-90"
+                                >
+                                    <IoPlayCircle className="text-3xl" />
+                                    <span className="px-1">
+                                        {watchTrailer_Text}
+                                    </span>
+                                </button>
                                 <Link
                                     to={adDetails.buyTicketSrc || ''}
                                     className="inline-flex items-center max-[480px]:text-lg capitalize px-3 p-1 bg-red-netflix rounded-md text-[#fff] hover:opacity-90"
@@ -116,15 +125,6 @@ const HomeAd: React.FC<HomeAdProps> = ({
                                         {buyTicket_Text}
                                     </span>
                                 </Link>
-                                <button
-                                    onClick={handleOpenAd}
-                                    className="inline-flex items-center max-[480px]:text-lg capitalize px-3 p-1 text-[#fff] dark:bg-white bg-[#141414] hover:opacity-90"
-                                >
-                                    <IoPlayCircle className="text-3xl" />
-                                    <span className="px-1">
-                                        {watchTrailer_Text}
-                                    </span>
-                                </button>
                                 <Link
                                     to={adDetails.detailMovieSrc || ''}
                                     className="font-MP_Regular inline-flex items-center max-[480px]:text-lg capitalize px-3 p-1 dark:text-[#fff] hover:opacity-90 dark:border-[#fff] border-[#000] border-[1px]"
