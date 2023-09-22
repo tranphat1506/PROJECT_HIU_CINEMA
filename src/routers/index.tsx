@@ -1,5 +1,5 @@
 import { HomeLayout, HomePage } from '../pages/Home';
-
+import { BuyTicketLayout, BuyTicketPage } from '@/pages/BuyTicket';
 type Router = Route[];
 type Route = {
     path: string;
@@ -10,6 +10,12 @@ type Route = {
 const publicRoutes: Router = [
     { path: '/', page: HomePage, layout: HomeLayout },
     { path: '/home', page: HomePage, layout: HomeLayout },
+    {
+        path: '/buy-ticket',
+        page: BuyTicketPage,
+        layout: BuyTicketLayout,
+        props: { headerProps: { autoHide: false, fixed: false } },
+    },
 ];
 
 const privateRoutes: Router = [];

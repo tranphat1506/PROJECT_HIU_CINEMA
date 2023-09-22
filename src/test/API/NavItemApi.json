@@ -6,7 +6,7 @@
     },
     "2": {
         "title": "ticket_register",
-        "direct_url": "/ticket",
+        "direct_url": "/buy-ticket",
         "icon": "bi-ticket-perforated-fill"
     },
     "3": {

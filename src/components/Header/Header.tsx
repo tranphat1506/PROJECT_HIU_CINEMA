@@ -3,11 +3,18 @@ import Container from '../Common/Container';
 import Logo from './Logo';
 import TopNav from './TopNav';
 import BottomNav from './BottomNav';
+import clsx from 'clsx';
 
-const Header = () => {
+export interface HeaderProps {
+    autoHide?: boolean;
+    fixed?: boolean;
+}
+const Header: React.FC<HeaderProps> = ({ autoHide = false, fixed = true }) => {
     const HeaderRef = useRef<HTMLDivElement>(null);
     const lastScroll = useRef<number>(0);
     useEffect(() => {
+        if (!autoHide)
+            return document.querySelector('html')?.classList.remove('onTop');
         window.addEventListener('scroll', () => {
             if (HeaderRef.current?.clientHeight !== undefined) {
                 if (
@@ -38,7 +45,12 @@ const Header = () => {
             <div
                 ref={HeaderRef}
                 id="header"
-                className="fixed z-50 h-auto py-2 w-screen bg-[#ffecd7] dark:bg-[#141414]"
+                className={clsx(
+                    'z-50 h-auto py-2 w-screen bg-[#ffecd7] dark:bg-[#141414]',
+                    {
+                        fixed: fixed,
+                    },
+                )}
             >
                 <Container className={'flex-col z-10'}>
                     <Logo className="absolute xl:px-8 px-3 lg:left-auto left-0 ml-16" />

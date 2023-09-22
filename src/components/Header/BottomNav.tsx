@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import NavItemApi from '@/test/API/NavItemApi.json';
 import clsx from 'clsx';
 import useLanguage from '@/hooks/useLanguage';
-import { memo } from 'react';
 import MenuItem from '../MenuItem/MenuItem';
 import FontIcon from '../Common/FontIcon';
 export interface NavItemStructure {
@@ -74,4 +73,4 @@ const BottomNav = () => {
     );
 };
 
-export default memo(BottomNav);
+export default BottomNav;

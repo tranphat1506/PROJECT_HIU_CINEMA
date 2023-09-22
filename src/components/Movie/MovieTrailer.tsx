@@ -89,7 +89,7 @@ const MovieTrailer: React.FC<MovieTrailerProps> = ({
         posterRef.current.hidden = false;
         videoRef.current.pause();
         videoRef.current.load();
-        isInteractDocumentFirst && videoRef.current.play();
+        isInteractDocumentFirst && !videoBlocked && videoRef.current.play();
         setHideTitle(false);
     }, [movieApi]);
     useEffect(() => {
@@ -161,6 +161,11 @@ const MovieTrailer: React.FC<MovieTrailerProps> = ({
                     disablePictureInPicture={true}
                     preload={'auto'}
                     muted={videoMuted}
+                    onCanPlay={(e) => {
+                        if (videoBlocked) return;
+                        setVideoEnded(false);
+                        e.currentTarget.play();
+                    }}
                     onError={() => {
                         setVideoEnded(true);
                     }}
