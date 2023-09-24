@@ -1,4 +1,4 @@
-import { Divider, IconButton } from '@mui/material';
+import { Box, Divider, IconButton } from '@mui/material';
 import { MouseEventHandler } from 'react';
 import { SlLogout, SlUser, SlWallet } from 'react-icons/sl';
 import useGlobalSetting from '@/hooks/useGlobalSetting';
@@ -11,7 +11,23 @@ interface AuthMenuBoxProps {
 const AuthMenuBox: React.FC<AuthMenuBoxProps> = ({ handleClick }) => {
     const text = useLanguage();
     const [setting, _] = useGlobalSetting();
-    if (!setting?.currentUser.is_logging) return <></>;
+    if (!setting?.currentUser.is_logging) {
+        /* Text display */
+        let signIn_Text = text('sign_in');
+        let signUp_Text = text('sign_up');
+        // -------------
+        return (
+            <Box component="div" className="md:hidden block">
+                <MenuItem
+                    className="!font-bold"
+                    handleClick={handleClick}
+                    title={signIn_Text}
+                />
+                <MenuItem handleClick={handleClick} title={signUp_Text} />
+                <Divider />
+            </Box>
+        );
+    }
     /* Text display */
     let accountSetting_Text = text('account_setting');
     let paymentSetting_Text = text('payment_setting');

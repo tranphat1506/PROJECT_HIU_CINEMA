@@ -120,7 +120,7 @@ const AvatarContainer: React.FC<AvatarContainerProps> = ({
                         onClick={handleClick}
                         size="small"
                     >
-                        <AvatarBySrc bgSize="35px" />
+                        <AvatarBySrc bgSize="32px" />
                     </IconButton>
                 </Tooltip>
                 <PopperMenu

@@ -8,7 +8,7 @@ const Container: React.FC<ContainerProps> = ({ children, className }) => {
     return (
         <div
             className={clsx(
-                'flex items-center max-w-[2520px] mx-auto xl:px-8 px-5 w-full',
+                'flex items-center max-w-[1700px] mx-auto xl:px-8 px-5 w-full',
                 className,
             )}
         >

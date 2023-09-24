@@ -13,7 +13,7 @@ const Logo: React.FC<LogoProps> = ({ className }) => {
                     'hiu-cinema__logo flex items-end bg-red-500 text-[#ffecd7] p-2 w-fit dark:text-white dark:bg-transparent rounded-md',
                 )}
             >
-                <div className="font-TitanOne flex items-center flex-row lg:mx-2">
+                <div className="font-TitanOne flex items-center flex-row lg:mx-2 w-max">
                     <span className="text-[2rem] leading-none dark:text-[#E50914] block">
                         H
                     </span>

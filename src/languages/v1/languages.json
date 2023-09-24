@@ -126,6 +126,15 @@
         },
         "fullscreen": {
             "text": "Fullscreen"
+        },
+        "movie": {
+            "text": "Movie",
+            "current_showing": "Now Showing",
+            "coming_soon": "Coming Soon",
+            "sneak_show": "Sneak Show"
+        },
+        "cinema": {
+            "text": "HIU Cinema"
         }
     },
     "vn": {
@@ -255,6 +264,15 @@
         },
         "fullscreen": {
             "text": "Toàn màn hình"
+        },
+        "movie": {
+            "text": "Phim",
+            "current_showing": "Đang chiếu",
+            "coming_soon": "Sắp ra mắt",
+            "sneak_show": "Suất chiếu đặc biệt"
+        },
+        "cinema": {
+            "text": "Rạp HIUCinema"
         }
     }
 }

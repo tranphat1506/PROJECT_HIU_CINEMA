@@ -2,26 +2,31 @@
     "1": {
         "title": "home",
         "direct_url": "/home",
-        "icon": "bi-house-fill"
+        "icon": "bi-house"
     },
     "2": {
-        "title": "ticket_register",
+        "title": "buy_ticket",
         "direct_url": "/buy-ticket",
-        "icon": "bi-ticket-perforated-fill"
+        "icon": "bi-ticket-perforated"
     },
     "3": {
-        "title": "showtimes",
-        "direct_url": "/showtimes",
-        "icon": "bi-film"
+        "title": "movie",
+        "direct_url": "/movie",
+        "icon": "bi-camera-reels"
     },
     "4": {
-        "title": "events",
-        "direct_url": "/events",
-        "icon": "bi-calendar-day-fill"
+        "title": "cinema",
+        "direct_url": "/cinema",
+        "icon": "bi-building"
     },
     "5": {
+        "title": "events",
+        "direct_url": "/events",
+        "icon": "bi-calendar2-date"
+    },
+    "6": {
         "title": "welcome",
         "direct_url": "/welcome",
-        "icon": "bi-info-circle-fill"
+        "icon": "bi-info-circle"
     }
 }

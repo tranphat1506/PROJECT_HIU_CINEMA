@@ -31,46 +31,40 @@ const MenuContainer = () => {
                 const icon: string = navDetails.icon;
                 return (
                     <Link key={id} to={to} className="relative px-4">
-                        {to === params && (
-                            <span className="bg-white dark:bg-[#141414] w-6 h-6 flex absolute z-10 rounded-full top-3 left-[2px]"></span>
-                        )}
                         <MenuItem
-                            className={clsx('!min-h-[48px]', {
+                            className={clsx('!min-h-[40px]', {
                                 '!bg-[#ef4444] dark:!bg-red-netflix cursor-default !rounded-md':
                                     to === params,
                             })}
                             key={id}
                             Icon={
                                 <FontIcon
-                                    icon={icon}
+                                    icon={to === params ? `${icon}-fill` : icon}
                                     className={clsx(
                                         'dark:text-white text-[#4b4b4b]',
                                         {
                                             '!text-white': to === params,
                                         },
                                     )}
-                                    iconSize={'1.3rem'}
+                                    iconSize={'1.4rem'}
                                 />
                             }
+                            spacingTitle="1.3rem"
                             title={
                                 <span
                                     className={clsx(
                                         'px-2 border-x-[1px] border-none dark:border-white font-MP_Medium dark:text-white text-[#4b4b4b]',
                                         {
-                                            'border-[#FFECD7] !border-dashed !text-white':
-                                                to === params,
+                                            '!text-white': to === params,
                                         },
                                     )}
                                 >
-                                    <span className="capitalize text-lg">
+                                    <span className="text-base max-[380px]:text-lg">
                                         {title_Text}
                                     </span>
                                 </span>
                             }
                         />
-                        {to === params && (
-                            <span className="bg-white dark:bg-[#141414] w-6 h-6 flex absolute z-10 rounded-full top-3 right-[2px]"></span>
-                        )}
                     </Link>
                 );
             })}
@@ -106,7 +100,7 @@ const Menu: React.FC<MenuProps> = ({ className }) => {
                 handleClose={handleCloseSidebar}
                 SidebarLayout={
                     <SidebarLayoutDefault
-                        className="w-screen min-[380px]:w-80 dark:!bg-[#141414] !bg-[#ffffff94] dark:!text-white"
+                        className="w-screen min-[380px]:w-auto min-w-[15rem] dark:!bg-[#141414] !bg-[#ffffff94] dark:!text-white"
                         handleClose={handleCloseSidebar}
                         showLogo={true}
                     >

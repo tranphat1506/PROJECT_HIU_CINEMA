@@ -16,14 +16,13 @@ const BottomNav = () => {
     return (
         <div
             id="bottom-nav"
-            className="lg:flex hidden visible w-full justify-center"
+            className="mt-2 lg:flex hidden visible w-full justify-center"
         >
             {Object.keys(NavItemApi).map((id) => {
                 const navDetails: NavItemStructure =
                     NavItemApi[id as keyof typeof NavItemApi];
                 const title_Text: string = text(navDetails.title);
                 const to: string = navDetails.direct_url;
-                const icon: string = navDetails.icon;
                 return (
                     <Link key={id} to={to} className="relative px-4">
                         {to === params && (
@@ -35,29 +34,17 @@ const BottomNav = () => {
                                     to === params,
                             })}
                             key={id}
-                            Icon={
-                                <FontIcon
-                                    icon={icon}
-                                    className={clsx(
-                                        'dark:text-white text-[#4b4b4b]',
-                                        {
-                                            'text-[#FFECD7]': to === params,
-                                        },
-                                    )}
-                                    iconSize={'1.1rem'}
-                                />
-                            }
                             title={
                                 <span
                                     className={clsx(
-                                        'px-2 border-x-[1px] border-none dark:border-white font-MP_Medium dark:text-white text-[#4b4b4b]',
+                                        'mx-2 px-2 border-x-[1px] border-none dark:border-white font-MP_Bold dark:text-white text-[#4b4b4b]',
                                         {
                                             'border-[#FFECD7] !border-dashed text-[#FFECD7]':
                                                 to === params,
                                         },
                                     )}
                                 >
-                                    <span className="capitalize">
+                                    <span className="uppercase">
                                         {title_Text}
                                     </span>
                                 </span>

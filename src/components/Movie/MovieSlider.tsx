@@ -44,7 +44,7 @@ export type MovieItem = {
 };
 export const MovieSliderSkeleton = () => {
     return (
-        <div className="w-full h-auto mb-6">
+        <div className="w-full h-auto mb-6 max-w-[1700px] mx-auto">
             <div className="title text-base dark:text-white mb-2 inline-block mx-5 lg:mx-10 dark:bg-[#ffffff0e] bg-[#ffffff91]">
                 <Skeleton
                     variant="rectangular"
@@ -168,7 +168,7 @@ const MovieSlider: React.FC<MovieSliderProps> = ({
     return (
         <div
             id={sliderApi.id}
-            className="w-full h-auto mb-6"
+            className="w-full h-auto mb-6 max-w-[1700px] mx-auto"
             onMouseEnter={toggleHoverSlider(true)}
             onMouseLeave={toggleHoverSlider(false)}
         >

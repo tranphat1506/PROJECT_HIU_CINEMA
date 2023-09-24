@@ -118,7 +118,7 @@ const AppearanceSubMenu: React.FC<AppearanceSubMenuProps> = ({
                                             <TbDeviceDesktop />
                                         )}
                                     </IconButton>
-                                    <span>
+                                    <span className="font-MP_Regular">
                                         {text('appearance', appearance)}
                                     </span>
                                 </Stack>

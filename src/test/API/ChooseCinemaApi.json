@@ -1,0 +1,56 @@
+{
+    "location": {
+        "1": {
+            "id": "hiu-dbp",
+            "region": "vietnam",
+            "city_id": "hochiminh_city",
+            "district_id": "q_binhthanh",
+            "name": {
+                "en": "HIUC - Dien Bien Phu",
+                "vn": "HIUC - Điện Biên Phủ"
+            }
+        },
+        "2": {
+            "id": "hiu-bongsao",
+            "region": "vietnam",
+            "city_id": "hochiminh_city",
+            "district_id": "q_8",
+            "name": { "en": "HIUC - Bong Sao", "vn": "HIUC - Bông Sao" }
+        }
+    },
+    "regions": {
+        "vietnam": {
+            "citiesApi": {
+                "hochiminh_city": {
+                    "id": "hochiminh_city",
+                    "name": {
+                        "en": "Ho Chi Minh City",
+                        "vn": "Thành phố Hồ Chí Minh"
+                    },
+                    "districtsApi": {
+                        "q_8": {
+                            "name": {
+                                "en": "District 8",
+                                "vn": "Quận 8"
+                            }
+                        },
+                        "q_binhthanh": {
+                            "name": {
+                                "en": "Binh Thanh District",
+                                "vn": "Quận Bình Thạnh"
+                            }
+                        }
+                    }
+                },
+                "hanoi_city": {
+                    "id": "hanoi_city",
+                    "name": {
+                        "en": "Ha Noi Capital",
+                        "vn": "Thủ đô Hà Nội"
+                    },
+                    "districtsApi": {}
+                }
+            }
+        }
+    }
+}

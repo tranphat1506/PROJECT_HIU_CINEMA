@@ -91,7 +91,9 @@ const LanguageSubMenu: React.FC<LanguageSubMenuProps> = ({
                                 handleClick={handleChangeLanguage(language)}
                                 className="border-none rounded-md text-lg justify-between"
                                 title={
-                                    <span>{text('language', language)}</span>
+                                    <span className="font-MP_Regular">
+                                        {text('language', language)}
+                                    </span>
                                 }
                                 Icon={
                                     <IconButton>

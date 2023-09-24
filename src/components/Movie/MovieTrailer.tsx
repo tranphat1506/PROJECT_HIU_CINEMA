@@ -181,12 +181,12 @@ const MovieTrailer: React.FC<MovieTrailerProps> = ({
                         },
                     )}
                 >
-                    <div className="text-md text-white flex w-full mx-5 md:mx-10 mt-4 flex-col max-w-[2520px]">
+                    <div className="text-md text-white flex w-full md:mx-10 mt-4 mx-4 flex-col max-w-[1700px]">
                         {movieApi?.movieTitleImgSrc ? (
                             <img
                                 src={movieApi?.movieTitleImgSrc}
                                 alt="Poster title image"
-                                className="md:w-[50%] w-full h-auto mb-2 max-h-[140px] object-contain object-left"
+                                className="md:w-[50%] w-full h-auto mb-2 min-h-[120px] max-h-[140px] object-contain object-left"
                                 onError={(e) => {
                                     e.currentTarget.hidden = true;
                                 }}

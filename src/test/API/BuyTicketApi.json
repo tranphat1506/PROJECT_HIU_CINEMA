@@ -1,0 +1,24 @@
+{
+    "pages_display": {
+        "en": {
+            "0": {
+                "id": "by_cinema",
+                "title": "Choose by cinema"
+            },
+            "1": {
+                "id": "by_movie",
+                "title": "Choose by movie"
+            }
+        },
+        "vn": {
+            "0": {
+                "id": "by_cinema",
+                "title": "Chọn theo rạp"
+            },
+            "1": {
+                "id": "by_movie",
+                "title": "Chọn theo phim"
+            }
+        }
+    }
+}

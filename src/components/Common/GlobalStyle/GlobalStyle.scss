@@ -6,7 +6,29 @@
         background-color: transparent;
     }
     #bottom-nav {
-        visibility: hidden;
+        display: none;
+    }
+    #header .choose-cinema {
+        background-color: transparent;
+        border: 1px solid #fff;
+    }
+}
+.dark.onTop {
+    #choose-cinema-menu {
+        .MuiOutlinedInput-notchedOutline {
+            border-color: #cacaca !important;
+        }
+        .MuiSvgIcon-root {
+            fill: #cacaca;
+        }
+        .MuiFormControl-root:hover {
+            .MuiSvgIcon-root {
+                fill: #fff;
+            }
+            .MuiOutlinedInput-notchedOutline {
+                border-color: #fff !important;
+            }
+        }
     }
 }
 #copyright .hiulogo__title {

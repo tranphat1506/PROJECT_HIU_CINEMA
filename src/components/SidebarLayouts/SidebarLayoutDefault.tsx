@@ -25,7 +25,7 @@ const SidebarLayoutDefault: React.FC<SidebarLayoutDefaultProps> = ({
                 className,
             )}
         >
-            <Container className="shadow-sm">
+            <Container className={clsx('shadow-sm')}>
                 <div className="inline-flex flex-row items-center gap-3 h-20 w-full">
                     <IconButton
                         size="small"
