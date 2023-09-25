@@ -6,14 +6,17 @@ import App from './App.tsx';
 import { BrowserRouter } from 'react-router-dom';
 import { SettingProvider } from './contexts/setting/index.tsx';
 import GlobalStyle from './components/Common/GlobalStyle/index.tsx';
+import { CookiesProvider } from 'react-cookie';
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
         <BrowserRouter>
-            <GlobalStyle>
-                <SettingProvider>
-                    <App />
-                </SettingProvider>
-            </GlobalStyle>
+            <CookiesProvider defaultSetOptions={{ path: '/' }}>
+                <GlobalStyle>
+                    <SettingProvider>
+                        <App />
+                    </SettingProvider>
+                </GlobalStyle>
+            </CookiesProvider>
         </BrowserRouter>
     </React.StrictMode>,
 );

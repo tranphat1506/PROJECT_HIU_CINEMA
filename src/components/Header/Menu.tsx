@@ -49,7 +49,7 @@ const MenuContainer = () => {
                                     iconSize={'1.4rem'}
                                 />
                             }
-                            spacingTitle="1.3rem"
+                            spacingTitle=".7rem"
                             title={
                                 <span
                                     className={clsx(
@@ -59,7 +59,7 @@ const MenuContainer = () => {
                                         },
                                     )}
                                 >
-                                    <span className="text-base max-[380px]:text-lg">
+                                    <span className="text-lg max-[380px]:text-lg">
                                         {title_Text}
                                     </span>
                                 </span>

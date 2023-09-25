@@ -135,6 +135,15 @@
         },
         "cinema": {
             "text": "HIU Cinema"
+        },
+        "choosing_cinema": {
+            "text": "Choose the HIU Cinema nearest to you :D",
+            "choose_cinema": "Cinema",
+            "choose_city": "City",
+            "choose_district": "District"
+        },
+        "all": {
+            "text": "All"
         }
     },
     "vn": {
@@ -273,6 +282,15 @@
         },
         "cinema": {
             "text": "Rạp HIUCinema"
+        },
+        "choosing_cinema": {
+            "text": "Chọn rạp HIUC gần nhất chỗ của bạn :D",
+            "choose_cinema": "Rạp",
+            "choose_city": "Thành phố/Tỉnh",
+            "choose_district": "Quận/Huyện"
+        },
+        "all": {
+            "text": "Tất cả"
         }
     }
 }

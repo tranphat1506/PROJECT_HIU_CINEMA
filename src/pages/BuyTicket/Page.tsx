@@ -11,7 +11,7 @@ type PageDisplayType = {
 };
 interface BuyTicketPageProps extends PageProps {}
 const BuyTicketPage: React.FC<BuyTicketPageProps> = ({
-    title = 'Mua vé - HIU Cinema',
+    title = 'Mua vé - HIU Cinemas',
 }) => {
     document.title = title; // Set Title
     useEffect(() => {

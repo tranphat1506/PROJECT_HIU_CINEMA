@@ -1,6 +1,6 @@
 {
     "location": {
-        "1": {
+        "hiu-dbp": {
             "id": "hiu-dbp",
             "region": "vietnam",
             "city_id": "hochiminh_city",
@@ -10,7 +10,7 @@
                 "vn": "HIUC - Điện Biên Phủ"
             }
         },
-        "2": {
+        "hiu-bongsao": {
             "id": "hiu-bongsao",
             "region": "vietnam",
             "city_id": "hochiminh_city",

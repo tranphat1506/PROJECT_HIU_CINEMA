@@ -1,7 +1,7 @@
 {
     "1": {
         "title": "home",
-        "direct_url": "/home",
+        "direct_url": "/",
         "icon": "bi-house"
     },
     "2": {

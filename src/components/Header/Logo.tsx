@@ -28,7 +28,7 @@ const Logo: React.FC<LogoProps> = ({ className }) => {
                 </div>
                 {/* <a href="https://www.flaticon.com/free-icons/cinema" title="cinema icons">Cinema icons created by Konkapp - Flaticon</a> */}
                 <span className="font-TitanOne lg:text-[2rem] text-[1rem] leading-none dark:text-[#fff] sm:block hidden">
-                    Cinema
+                    Cinemas
                 </span>
             </Link>
         </div>

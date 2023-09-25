@@ -9,7 +9,6 @@ type Route = {
 };
 const publicRoutes: Router = [
     { path: '/', page: HomePage, layout: HomeLayout },
-    { path: '/home', page: HomePage, layout: HomeLayout },
     {
         path: '/buy-ticket',
         page: BuyTicketPage,

@@ -3,7 +3,6 @@ import NavItemApi from '@/test/API/NavItemApi.json';
 import clsx from 'clsx';
 import useLanguage from '@/hooks/useLanguage';
 import MenuItem from '../MenuItem/MenuItem';
-import FontIcon from '../Common/FontIcon';
 export interface NavItemStructure {
     title: string;
     direct_url: string;

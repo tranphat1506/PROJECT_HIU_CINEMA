@@ -1,9 +1,4 @@
-import {
-    CircularProgress,
-    Dialog,
-    DialogTitle,
-    IconButton,
-} from '@mui/material';
+import { CircularProgress, Dialog, IconButton } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { IoMdClose } from 'react-icons/io';
 import { MovieItem } from '../Movie/MovieSlider';
@@ -69,7 +64,6 @@ const HomeAd: React.FC<HomeAdProps> = ({
             handleCloseAd(e);
         }
     };
-    const adTitle_Text = 'Giới thiệu bạn phim mới cập bến rạp nèeee';
     return (
         <Dialog
             open={open}
@@ -80,7 +74,7 @@ const HomeAd: React.FC<HomeAdProps> = ({
             }}
         >
             <div className="m-4">
-                <div className="w-full mb-2 max-w-[480px]:absolute">
+                <div className="w-full mb-2">
                     <IconButton
                         onClick={handleClose(true)}
                         className="dark:!text-white hover:!bg-[#ffffff21]"
@@ -92,20 +86,14 @@ const HomeAd: React.FC<HomeAdProps> = ({
                             <span className="text-sm">{adTimeLeft}</span>
                         )}
                     </IconButton>
-                    <DialogTitle
-                        className="!font-MP_Bold max-[480px]:!my-7 !my-3 max-[480px]:!text-4xl max-[480px]:w-full w-5/6 !text-3xl max-md:text-md !py-0 mx-auto max-[480px]:!px-0 dark:text-white"
-                        textTransform={'uppercase'}
-                    >
-                        {adTitle_Text}
-                    </DialogTitle>
                 </div>
                 {adDetails ? (
-                    <div className="mb-2 w-full min-[480px]:h-auto h-full flex flex-col items-center">
+                    <div className="mb-2 min-[480px]:h-auto h-full flex flex-col items-center">
                         <img
                             onClick={handleOpenAd}
                             src={adDetails.posterSrc}
                             alt={adDetails.movieTitle}
-                            className="w-auto h-auto object-contain rounded-md mb-2 max-h-[450px] cursor-pointer"
+                            className="w-auto max-h-[500px] object-contain rounded-md mb-2 cursor-pointer"
                         />
                         <span className="flex w-auto justify-between font-MP_Regular gap-2 flex-wrap">
                             <Link
@@ -134,7 +122,7 @@ const HomeAd: React.FC<HomeAdProps> = ({
                         </span>
                     </div>
                 ) : (
-                    <div className="mb-2 w-full min-[380px]:h-auto h-full flex justify-center !my-[100px]">
+                    <div className="mb-2 w-[400px] min-[380px]:h-auto h-full flex justify-center !my-[100px]">
                         <CircularProgress />
                     </div>
                 )}

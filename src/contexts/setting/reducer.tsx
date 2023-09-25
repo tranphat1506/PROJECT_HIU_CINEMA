@@ -4,6 +4,7 @@ import {
     CHANGE_SCREEN,
     CHANGE_LANGUAGE,
     CHANGE_APPEARANCE,
+    CHANGE_CINEMA_LOCATION,
 } from './constants';
 
 export type User = {
@@ -21,6 +22,7 @@ export type GlobalSetting = {
     appearance: 'device' | 'dark' | 'light';
     language: string;
     currentUser: User;
+    cinemaLocation: string | null;
     deviceDetail: DeviceDetail;
 };
 export const initState: GlobalSetting = {
@@ -31,6 +33,7 @@ export const initState: GlobalSetting = {
         last_logging: 0,
         user_info: null,
     },
+    cinemaLocation: null,
     deviceDetail: {
         device: 'pc',
         width: null,
@@ -65,6 +68,12 @@ const reducer: React.Reducer<GlobalSetting, ActionPayload> = (
             newState = {
                 ...state,
                 appearance: actionPayload as any,
+            };
+            break;
+        case CHANGE_CINEMA_LOCATION:
+            newState = {
+                ...state,
+                cinemaLocation: actionPayload as string,
             };
             break;
         default:

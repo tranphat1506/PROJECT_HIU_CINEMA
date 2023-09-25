@@ -211,7 +211,7 @@ const MovieTrailer: React.FC<MovieTrailerProps> = ({
                                 <div className="inline-flex flex-row gap-5 flex-wrap justify-between">
                                     <Link
                                         to={movieApi?.buyTicketSrc || ''}
-                                        className="inline-flex items-center text-xl capitalize sm:p-2 px-3 p-1 bg-red-netflix rounded-md text-[#fff] hover:opacity-90"
+                                        className="inline-flex items-center text-xl capitalize py-2 px-3 bg-red-netflix rounded-md text-[#fff] hover:opacity-90"
                                     >
                                         <HiMiniTicket className="text-3xl" />
                                         <span className="px-2">
@@ -220,7 +220,7 @@ const MovieTrailer: React.FC<MovieTrailerProps> = ({
                                     </Link>
                                     <Link
                                         to={movieApi?.detailMovieSrc || ''}
-                                        className="inline-flex items-center text-xl capitalize sm:p-2 px-3 p-1 bg-white rounded-md text-[#141414] hover:opacity-90"
+                                        className="inline-flex items-center text-xl capitalize py-2 px-3 bg-white rounded-md text-[#141414] hover:opacity-90"
                                     >
                                         <IoInformationCircle className="text-3xl" />
                                         <span className="px-2">

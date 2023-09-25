@@ -8,13 +8,13 @@ export interface PageProps {
 
 interface HomePageProps extends PageProps {}
 const HomePage: React.FC<HomePageProps> = ({
-    title = 'Trang chủ - HIU Cinema',
+    title = 'Trang chủ - HIU Cinemas',
 }) => {
     document.title = title; // Set Title
     const [currentMovieDisplay, setCurrentMovieDisplay] = useState<
         MovieItem | undefined
     >();
-    const [isAdClosed, setIsAdClosed] = useState(false);
+    const [isAdClosed, setIsAdClosed] = useState(true);
     const handleCloseAd = useCallback(() => {
         setIsAdClosed(true);
     }, []);

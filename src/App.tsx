@@ -5,22 +5,32 @@ import React, { useEffect } from 'react';
 import useGlobalSetting from './hooks/useGlobalSetting';
 import {
     changeAppearance,
+    changeCinemaLocation,
     changeLanguage,
     changeScreen,
 } from './contexts/setting/actions';
+import { useCookies } from 'react-cookie';
 function App() {
     const [_, settingDispatch] = useGlobalSetting();
-
+    const [cookie] = useCookies(['@cinema-id']);
     useEffect(() => {
-        const getLanguage = window.localStorage.getItem('@language') || 'vn';
-        const getAppearance =
-            window.localStorage.getItem('@appearance') || 'device';
-        // @ts-ignore
-        settingDispatch(changeLanguage(getLanguage));
-        // @ts-ignore
-        settingDispatch(changeAppearance(getAppearance));
-        // @ts-ignore
-        settingDispatch(changeScreen(window.innerWidth, window.innerHeight));
+        if (settingDispatch) {
+            const getLanguage =
+                window.localStorage.getItem('@language') || 'vn';
+            const getAppearance =
+                (window.localStorage.getItem('@appearance') as any) || 'device';
+            // Set Language
+            settingDispatch(changeLanguage(getLanguage));
+            // Set Appearance Mode
+            settingDispatch(changeAppearance(getAppearance));
+            // Set Device
+            settingDispatch(
+                changeScreen(window.innerWidth, window.innerHeight),
+            );
+            // Set Cinema Location
+            if (!!cookie['@cinema-id'])
+                settingDispatch(changeCinemaLocation(cookie['@cinema-id']));
+        }
     }, []);
     return (
         <Routes>

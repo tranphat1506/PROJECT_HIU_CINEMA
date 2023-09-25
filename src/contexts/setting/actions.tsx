@@ -5,13 +5,15 @@ import {
     ActionConstant,
     CHANGE_LANGUAGE,
     CHANGE_APPEARANCE,
+    CHANGE_CINEMA_LOCATION,
 } from './constants';
 import { User, DeviceDetail } from './reducer';
 export type ActionPayload =
     | LoginUserPayload
     | ChangeScreenPayload
     | ChangeLanguagePayload
-    | ChangeAppearancePayload;
+    | ChangeAppearancePayload
+    | ChangeCinemaLocationPayload;
 export interface LoginUserPayload {
     type: ActionConstant;
     payload: User;
@@ -27,6 +29,11 @@ export interface ChangeLanguagePayload {
 export interface ChangeAppearancePayload {
     type: ActionConstant;
     payload: 'device' | 'light' | 'dark';
+}
+
+export interface ChangeCinemaLocationPayload {
+    type: ActionConstant;
+    payload: string; // cinema location ID
 }
 
 export const loginUser = (status: boolean): LoginUserPayload => {
@@ -93,5 +100,13 @@ export const changeAppearance = (
     return {
         type: CHANGE_APPEARANCE,
         payload: mode,
+    };
+};
+export const changeCinemaLocation = (
+    cinemaId: string, // cinema location ID
+): ChangeCinemaLocationPayload => {
+    return {
+        type: CHANGE_CINEMA_LOCATION,
+        payload: cinemaId,
     };
 };
