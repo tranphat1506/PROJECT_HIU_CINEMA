@@ -10,7 +10,7 @@ import MovieSliderApi from '@/test/API/MovieSliderApi.json';
 export type AdvertisementProps = {
     open: boolean;
     handleCloseAd?: React.MouseEventHandler;
-    handleSetMovieDisplay: React.Dispatch<
+    handleSetMovieDisplay?: React.Dispatch<
         React.SetStateAction<MovieItem | undefined>
     >;
 };
@@ -53,7 +53,7 @@ const HomeAd: React.FC<HomeAdProps> = ({
         };
     }, []);
     const handleOpenAd = (e: React.MouseEvent) => {
-        if (!handleCloseAd || !adDetails) return;
+        if (!handleCloseAd || !adDetails || !handleSetMovieDisplay) return;
         handleSetMovieDisplay(adDetails);
         handleCloseAd(e);
     };

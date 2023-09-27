@@ -7,7 +7,7 @@
             {
                 "id": "1",
                 "movieScale": "1",
-                "buyTicketSrc": "/buy/1",
+                "buyTicketSrc": "/buy-ticket/1",
                 "detailMovieSrc": "/movie/1",
                 "posterSrc": "/19to20/19to20-poster.jpg",
                 "backgroundSrc": "/19to20/19to20-background.jpg",
@@ -20,7 +20,7 @@
             {
                 "id": "2",
                 "movieScale": "1.5",
-                "buyTicketSrc": "/buy/2",
+                "buyTicketSrc": "/buy-ticket/2",
                 "detailMovieSrc": "/movie/2",
                 "posterSrc": "/thenun2/thenun2-poster.jpg",
                 "backgroundSrc": "/thenun2/thenun2-background.jpg",
@@ -33,7 +33,7 @@
             {
                 "id": "3",
                 "movieScale": "1.2",
-                "buyTicketSrc": "/buy/3",
+                "buyTicketSrc": "/buy-ticket/3",
                 "detailMovieSrc": "/movie/3",
                 "posterSrc": "/island/island-poster.jpg",
                 "backgroundSrc": "/island/island-background.jpg",
@@ -46,7 +46,7 @@
             {
                 "id": "4",
                 "movieScale": "1.2",
-                "buyTicketSrc": "/buy/4",
+                "buyTicketSrc": "/buy-ticket/4",
                 "detailMovieSrc": "/movie/4",
                 "posterSrc": "/muoi/muoi-poster.jpg",
                 "backgroundSrc": "/muoi/muoi-background.jpg",
@@ -59,7 +59,7 @@
             {
                 "id": "5",
                 "movieScale": "1",
-                "buyTicketSrc": "/buy/5",
+                "buyTicketSrc": "/buy-ticket/5",
                 "detailMovieSrc": "/movie/5",
                 "posterSrc": "/pastlives/pastlives-poster.webp",
                 "backgroundSrc": "/pastlives/pastlives-background.jpg",
@@ -79,7 +79,7 @@
             {
                 "id": "1",
                 "movieScale": "1",
-                "buyTicketSrc": "/buy/1",
+                "buyTicketSrc": "/buy-ticket/1",
                 "detailMovieSrc": "/movie/1",
                 "posterSrc": "/19to20/19to20-poster.jpg",
                 "backgroundSrc": "/19to20/19to20-background.jpg",
@@ -92,7 +92,7 @@
             {
                 "id": "2",
                 "movieScale": "1.5",
-                "buyTicketSrc": "/buy/2",
+                "buyTicketSrc": "/buy-ticket/2",
                 "detailMovieSrc": "/movie/2",
                 "posterSrc": "/thenun2/thenun2-poster.jpg",
                 "backgroundSrc": "/thenun2/thenun2-background.jpg",
@@ -105,7 +105,7 @@
             {
                 "id": "3",
                 "movieScale": "1.2",
-                "buyTicketSrc": "/buy/3",
+                "buyTicketSrc": "/buy-ticket/3",
                 "detailMovieSrc": "/movie/3",
                 "posterSrc": "/island/island-poster.jpg",
                 "backgroundSrc": "/island/island-background.jpg",
@@ -118,7 +118,7 @@
             {
                 "id": "4",
                 "movieScale": "1.2",
-                "buyTicketSrc": "/buy/4",
+                "buyTicketSrc": "/buy-ticket/4",
                 "detailMovieSrc": "/movie/4",
                 "posterSrc": "/muoi/muoi-poster.jpg",
                 "backgroundSrc": "/muoi/muoi-background.jpg",
@@ -131,7 +131,7 @@
             {
                 "id": "5",
                 "movieScale": "1",
-                "buyTicketSrc": "/buy/5",
+                "buyTicketSrc": "/buy-ticket/5",
                 "detailMovieSrc": "/movie/5",
                 "posterSrc": "/pastlives/pastlives-poster.webp",
                 "backgroundSrc": "/pastlives/pastlives-background.jpg",

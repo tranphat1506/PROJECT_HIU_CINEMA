@@ -1,5 +1,3 @@
-'use client';
-
 import { useState, Dispatch, SetStateAction } from 'react';
 
 export const useDefaultSidebarState = () => {

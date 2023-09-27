@@ -8,7 +8,7 @@ const Logo: React.FC<LogoProps> = ({ className }) => {
     return (
         <div className={clsx(className)}>
             <Link
-                to={'/home'}
+                to={'/'}
                 className={clsx(
                     'hiu-cinema__logo flex items-end bg-red-500 text-[#ffecd7] p-2 w-fit dark:text-white dark:bg-transparent rounded-md',
                 )}

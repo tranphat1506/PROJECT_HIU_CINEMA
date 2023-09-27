@@ -267,7 +267,7 @@ interface MovieSliderContainerProps {
     >;
 }
 const MovieSliderContainer: React.FC<MovieSliderContainerProps> = memo(
-    ({ movieItemList, handleSetVideoDisplay }) => {
+    ({ movieItemList }) => {
         return (
             <>
                 {[1, 2, 3].map((loopSliderId) => {
@@ -278,9 +278,6 @@ const MovieSliderContainer: React.FC<MovieSliderContainerProps> = memo(
                                     movieApi={movieApi}
                                     key={index}
                                     id={index}
-                                    handleSetVideoDisplay={
-                                        handleSetVideoDisplay
-                                    }
                                 />
                             );
                         });
@@ -290,7 +287,6 @@ const MovieSliderContainer: React.FC<MovieSliderContainerProps> = memo(
                                 movieApi={movieApi}
                                 key={index}
                                 id={index}
-                                handleSetVideoDisplay={handleSetVideoDisplay}
                             />
                         );
                     });

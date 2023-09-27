@@ -1,0 +1,70 @@
+{
+    "items": [
+        {
+            "to": "/movie",
+            "poster_url": "/island/island-background.jpg",
+            "poster_scale": "1",
+            "poster_fit": { "fit": "cover", "position": "center" },
+            "link_state": {
+                "movieItem": {
+                    "id": "3",
+                    "movieScale": "1.2",
+                    "buyTicketSrc": "/buy/3",
+                    "detailMovieSrc": "/movie/3",
+                    "posterSrc": "/island/island-poster.jpg",
+                    "backgroundSrc": "/island/island-background.jpg",
+                    "movieType": "Action, Korea",
+                    "movieTrailerSrc": "/island/island-trailer.mp4",
+                    "movieTitleImgSrc": "/island/island-title.png",
+                    "movieTitle": "Island: Hòn đảo ma quái",
+                    "movieDescription": "Hòn Đảo Ma Quái kể về Won Mi Ho là con gái duy nhất của cha cô, người điều hành tập đoàn Daehan. Thái độ kiêu ngạo và ích kỷ của cô đã khiến cô mắc phải một sai lầm lớn khiến cha cô tức giận và trục xuất cô đến đảo Jeju. Ở đó, cô được phân công làm giáo viên đạo đức trung học. Cô ấy không hề hay biết, hòn đảo là nơi ác quỷ lang thang tự do. Cô gặp những cá nhân khác trên đảo và cùng nhau, các nhân vật hợp lực để sống."
+                }
+            }
+        },
+        {
+            "to": "/movie",
+            "poster_url": "/muoi/muoi-background.jpg",
+            "poster_scale": "1",
+            "poster_fit": { "fit": "cover", "position": "center" },
+            "link_state": {
+                "movieItem": {
+                    "id": "4",
+                    "movieScale": "1.2",
+                    "buyTicketSrc": "/buy/4",
+                    "detailMovieSrc": "/movie/4",
+                    "posterSrc": "/muoi/muoi-poster.jpg",
+                    "backgroundSrc": "/muoi/muoi-background.jpg",
+                    "movieType": "Horror, Vietnam",
+                    "movieTrailerSrc": "/muoi/muoi-trailer.mp4",
+                    "movieTitle": "Mười: Lời nguyền trở lại",
+                    "movieTitleImgSrc": "/muoi/muoi-title.png",
+                    "movieDescription": "Một giám tuyển nghệ thuật nọ gặp lại người bạn cũ ở một căn biệt thự biệt lập. Tại đó, họ phát hiện ra một bức chân dung bị nguyền rủa ẩn chứa một linh hồn độc ác."
+                }
+            }
+        },
+        {
+            "to": "https://hiu.vn/doan-hoi-hiu/hiu-cinema/hiu-cinema-thong-bao-tuyen-dung-cac-vi-tri/",
+            "poster_url": "slideshow-1.jpg",
+            "poster_scale": "1",
+            "poster_fit": { "fit": "contain", "position": "center" }
+        },
+        {
+            "to": "https://hiu.vn/doan-hoi-hiu/hiu-cinema/funfact-ve-du-an-hiu-cinema-rap-chieu-phim-mien-phi-danh-cho-sinh-vien-hiu/",
+            "poster_url": "slideshow-2.png",
+            "poster_scale": "0.75",
+            "poster_fit": { "fit": "contain", "position": "center" }
+        },
+        {
+            "to": "https://hiu.vn/doan-hoi-hiu/hiu-cinema/funfact-ve-du-an-hiu-cinema-rap-chieu-phim-mien-phi-danh-cho-sinh-vien-hiu/",
+            "poster_url": "slideshow-3.png",
+            "poster_scale": "0.75",
+            "poster_fit": { "fit": "contain", "position": "center" }
+        },
+        {
+            "to": "https://hiu.vn",
+            "poster_url": "slideshow-4.jpg",
+            "poster_scale": "1",
+            "poster_fit": { "fit": "contain", "position": "center" }
+        }
+    ]
+}

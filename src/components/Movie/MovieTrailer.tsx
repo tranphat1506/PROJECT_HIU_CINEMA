@@ -211,7 +211,7 @@ const MovieTrailer: React.FC<MovieTrailerProps> = ({
                                 <div className="inline-flex flex-row gap-5 flex-wrap justify-between">
                                     <Link
                                         to={movieApi?.buyTicketSrc || ''}
-                                        className="inline-flex items-center text-xl capitalize py-2 px-3 bg-red-netflix rounded-md text-[#fff] hover:opacity-90"
+                                        className="inline-flex items-center text-xl capitalize py-2 px-3 dark:bg-red-netflix bg-red-500 rounded-md text-[#fff] hover:opacity-90"
                                     >
                                         <HiMiniTicket className="text-3xl" />
                                         <span className="px-2">
