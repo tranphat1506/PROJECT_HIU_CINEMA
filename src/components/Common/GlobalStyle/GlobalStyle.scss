@@ -4,6 +4,9 @@
 .onTop {
     #header {
         background-color: transparent;
+        .choose-cinema {
+            color: #fff;
+        }
     }
     #bottom-nav {
         display: none;
@@ -12,7 +15,7 @@
         background-color: transparent;
     }
 }
-.dark.onTop {
+.dark {
     #choose-cinema-menu {
         .MuiOutlinedInput-notchedOutline {
             border-color: #cacaca !important;

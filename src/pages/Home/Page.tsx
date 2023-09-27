@@ -1,5 +1,6 @@
 import HomeAd from '@/components/Advertisement/HomeAd';
-import MovieSlider, { MovieItem } from '@/components/Movie/MovieSlider';
+// import MovieSlider, { MovieItem } from '@/components/Movie/MovieSlider';
+import MovieSliderV2, { MovieItem } from '@/components/Movie/MovieSliderV2';
 import MovieTrailer from '@/components/Movie/MovieTrailer';
 import React, { useState, useCallback } from 'react';
 export interface PageProps {
@@ -30,16 +31,14 @@ const HomePage: React.FC<HomePageProps> = ({
                 isInteractDocumentFirst={isAdClosed}
             />
             <div className="h-auto w-full font-MP_Medium">
-                <MovieSlider
+                {/* Movie slider v1 */}
+                {/* <MovieSlider
                     path="/currentShowing"
                     handleSetMovieDisplay={setCurrentMovieDisplay}
-                />
-                <MovieSlider path="/c" />
-                <MovieSlider path="/c" />
-                <MovieSlider path="/c" />
-                <MovieSlider path="/c" />
-                <MovieSlider path="/c" />
-                <MovieSlider path="/c" />
+                /> */}
+
+                {/* Movie slider v2 */}
+                <MovieSliderV2 handleSetMovieDisplay={setCurrentMovieDisplay} />
             </div>
         </>
     );

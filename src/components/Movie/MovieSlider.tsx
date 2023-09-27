@@ -4,8 +4,9 @@ import { memo, useEffect, useRef, useState } from 'react';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import MovieSliderApi from '@/test/API/MovieSliderApi.json';
 import useLanguage from '@/hooks/useLanguage';
-import { Link } from 'react-router-dom';
+
 import SlideItem from './SlideItem';
+import { Link } from 'react-router-dom';
 const getItemWidth = (deviceWidth: number): string => {
     if (deviceWidth < 480) return '100%';
     return '33.333%';
@@ -74,6 +75,7 @@ interface MovieSliderProps {
         React.SetStateAction<MovieItem | undefined>
     >;
 }
+
 const MovieSlider: React.FC<MovieSliderProps> = ({
     path,
     handleSetMovieDisplay,
@@ -192,7 +194,6 @@ const MovieSlider: React.FC<MovieSliderProps> = ({
 
                 {!hoverSlider && <BsChevronRight className="h-[1.5rem] ml-2" />}
             </Link>
-
             <div
                 onTouchStart={(e) => {
                     slidingPosition.current = e.touches[0].clientX;

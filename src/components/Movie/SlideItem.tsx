@@ -23,7 +23,7 @@ const SlideItem: React.FC<SlideItemProps> = ({
     return (
         <span
             className={clsx(
-                'block text-white dark:bg-[#ffffff0e] bg-[#ffffff91] rounded-sm cursor-pointer select-none',
+                'block text-white dark:bg-[#ffffff0e] bg-[#ffffff91] rounded-sm cursor-pointer',
                 'min-h-[50%]', // height
                 'min-[480px]:min-w-[33.333%] min-w-full', // width
             )}
@@ -31,6 +31,7 @@ const SlideItem: React.FC<SlideItemProps> = ({
             {movieApi ? (
                 <img
                     src={movieApi.posterSrc}
+                    draggable={false}
                     className="object-cover object-center w-full h-full rounded-sm"
                     onClick={() => {
                         if (!handleSetVideoDisplay) return;

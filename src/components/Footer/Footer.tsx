@@ -6,8 +6,8 @@ import useLanguage from '@/hooks/useLanguage';
 const Footer = () => {
     const text = useLanguage();
     return (
-        <footer className="max-w-[1700px] mx-auto h-full bg-[#fff] shadow-inner dark:bg-[#141414] w-full font-MP_Regular text-[#141414] dark:text-[#c4c4c4]">
-            <div className="min-h-[400px] flex flex-col justify-end max-w-[2520px] mx-auto p-4 gap-4">
+        <footer className="h-full bg-[#fff] shadow-inner dark:bg-[#141414] w-full font-MP_Regular text-[#141414] dark:text-[#c4c4c4]">
+            <div className="max-w-[1700px] mx-auto min-h-[400px] flex flex-col justify-end p-4 gap-4">
                 <div id="social-media" className="w-full">
                     <SocialContainer
                         width={40}
