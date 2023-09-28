@@ -33,6 +33,11 @@
         }
     }
 }
+#movie-detail {
+    .MuiBreadcrumbs-separator {
+        margin: 0;
+    }
+}
 #copyright .hiulogo__title {
     color: inherit !important;
 }

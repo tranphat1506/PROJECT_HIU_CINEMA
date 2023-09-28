@@ -14,7 +14,7 @@ const MoviePage: React.FC<MoviePageProps> = ({
     const [currentMovieDisplay, setCurrentMovieDisplay] = useState<
         MovieItem | undefined
     >();
-    const [isAdClosed, setIsAdClosed] = useState(true);
+    const [isAdClosed, setIsAdClosed] = useState(false);
     const handleCloseAd = useCallback(() => {
         setIsAdClosed(true);
     }, []);

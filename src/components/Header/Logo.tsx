@@ -18,7 +18,7 @@ const Logo: React.FC<LogoProps> = ({ className }) => {
                         H
                     </span>
                     <img
-                        src="3d-glasses.png"
+                        src="/3d-glasses.png"
                         alt="Popcorn image"
                         className="h-[2rem]"
                     />

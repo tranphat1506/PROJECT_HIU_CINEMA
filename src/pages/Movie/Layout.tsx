@@ -1,3 +1,3 @@
 import { HomeLayout } from '../Home';
-const BuyTicketLayout = HomeLayout;
-export default BuyTicketLayout;
+const MovieLayout = HomeLayout;
+export default MovieLayout;

@@ -1,6 +1,8 @@
 import { HomeLayout, HomePage } from '../pages/Home';
 import { BuyTicketLayout, BuyTicketPage } from '@/pages/BuyTicket';
 import { MoviePage, MovieLayout } from '@/pages/Movie';
+import { MovieDetailPage, MovieDetailLayout } from '@/pages/MovieDetail';
+
 type Router = Route[];
 type Route = {
     path: string;
@@ -20,6 +22,12 @@ const publicRoutes: Router = [
         page: MoviePage,
         layout: MovieLayout,
         props: { headerProps: { autoHide: true, fixed: true } },
+    },
+    {
+        path: '/movie/:id',
+        page: MovieDetailPage,
+        layout: MovieDetailLayout,
+        props: { headerProps: { autoHide: false, fixed: false } },
     },
     {
         path: '/buy-ticket',

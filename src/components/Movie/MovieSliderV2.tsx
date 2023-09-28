@@ -80,6 +80,13 @@ const MovieSlider: React.FC<MovieSliderProps> = () => {
 
     const [hoverSlider, setHoverSlider] = useState(false);
     const slidingPosition = useRef<number | null>(null);
+    useEffect(() => {
+        if (!currentSliderId) return;
+        document.title = `${
+            text(currentSlider.title.text, currentSlider.title.subText) ||
+            'Phim'
+        } - HIU Cinemas`;
+    }, [currentSliderId]);
     const toggleHoverSlider = (state: boolean) => () => {
         setHoverSlider(state);
     };
