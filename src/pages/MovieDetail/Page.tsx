@@ -68,11 +68,11 @@ const MovieDetailPage: React.FC<MovieDetailPageProps> = ({
                     </div>
                     <div className="w-auto flex sm:flex-nowrap flex-wrap gap-2 justify-center">
                         {/* Image */}
-                        <div className="h-auto w-max rounded-md inline-flex justify-center">
+                        <div className="h-auto w-full rounded-md inline-flex justify-center">
                             <img
                                 src="/muoi/muoi-poster.jpg"
                                 alt=""
-                                className="min-[380px]:rounded-md lg:min-w-[400px] md:min-w-[300px] w-auto h-auto object-cover"
+                                className="min-[380px]:rounded-md w-auto h-auto object-contain"
                             />
                         </div>
                         {/* Detail */}
@@ -83,7 +83,7 @@ const MovieDetailPage: React.FC<MovieDetailPageProps> = ({
                                         <Link
                                             key={index}
                                             to={''}
-                                            className="font-MP_Medium text-base px-2 py-1 border-[1px] rounded-full mr-4 hover:bg-[#ffffff17]"
+                                            className="font-MP_Medium text-sm px-2 py-1 border-[1px] rounded-full mr-4 hover:bg-[#ffffff17]"
                                         >
                                             {name}
                                         </Link>
