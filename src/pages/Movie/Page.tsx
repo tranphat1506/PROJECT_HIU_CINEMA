@@ -21,7 +21,7 @@ const MoviePage: React.FC<MoviePageProps> = ({
     useEffect(() => {
         window.scroll(0, 0);
         if (!route.state || !route.state.movieItem) return;
-        const routeMovieState: MovieItem = route.state.movieItem;
+        const routeMovieState: MovieItem = route.state?.movieItem || undefined;
         setCurrentMovieDisplay(routeMovieState);
     }, [route]);
     return (

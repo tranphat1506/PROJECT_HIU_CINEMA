@@ -49,7 +49,7 @@ const Header: React.FC<HeaderProps> = ({ autoHide = true, fixed = true }) => {
                 ref={HeaderRef}
                 id="header"
                 className={clsx(
-                    'z-50 h-auto py-2 w-full bg-[#ffecd7] dark:bg-[#141414]',
+                    'z-50 h-auto py-2 w-full bg-white dark:bg-[#141414]',
                     {
                         fixed: fixed,
                     },

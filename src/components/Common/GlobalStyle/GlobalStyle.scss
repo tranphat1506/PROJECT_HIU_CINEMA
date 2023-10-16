@@ -69,12 +69,12 @@
 .blur-bg {
     background-color: transparent;
     background-image: linear-gradient(
-        rgba(255, 236, 215, 0) 0px,
-        rgba(255, 236, 215, 0.15) 36%,
-        rgba(255, 236, 215, 0.35) 54%,
-        rgba(255, 236, 215, 0.58) 70%,
-        rgb(255, 236, 215) 86%,
-        rgb(255, 236, 215)
+        rgb(255 255 255 / 0%) 0px,
+        rgb(255 255 255 / 15%) 36%,
+        rgb(255 255 255 / 35%) 54%,
+        rgb(255 255 255 / 58%) 70%,
+        rgb(255 255 255) 86%,
+        rgb(255 255 255)
     );
 }
 .dark .blur-bg {

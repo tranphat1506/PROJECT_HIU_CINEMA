@@ -8,7 +8,7 @@ interface HomeLayoutProps {
 }
 const HomeLayout: React.FC<HomeLayoutProps> = ({ children, headerProps }) => {
     return (
-        <div className="dark:bg-[#141414] bg-[#FFECD7] h-full">
+        <div className="dark:bg-[#141414] bg-[#fff] h-full">
             <Header {...headerProps} />
             {children}
             <Footer />

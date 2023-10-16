@@ -93,7 +93,7 @@ const ChooseCinema = () => {
         <>
             <button
                 onClick={handleOpenMenu(!openMenu)}
-                className="choose-cinema outline-none font-MP_Medium rounded py-1 text-[#FFECD7] dark:text-white bg-red-500 dark:bg-transparent"
+                className="choose-cinema outline-none font-MP_Medium rounded py-1 text-[#4b4b4b] dark:text-white dark:bg-transparent"
             >
                 <span className="flex flex-row items-center flex-nowrap px-1">
                     <HiLocationMarker className="text-sm h-full" />

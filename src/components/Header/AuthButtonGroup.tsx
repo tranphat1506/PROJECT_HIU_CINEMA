@@ -21,7 +21,7 @@ const AuthButtonGroup = () => {
                     color="inherit"
                     className="auth-btn !rounded-full !bg-red-500 dark:!bg-red-netflix !px-4 hover:shadow-xl"
                 >
-                    <span className="text-[#FFECD7] dark:text-white auth-btn__title">
+                    <span className="text-white dark:text-white auth-btn__title">
                         {signIn_Text}
                     </span>
                 </Button>

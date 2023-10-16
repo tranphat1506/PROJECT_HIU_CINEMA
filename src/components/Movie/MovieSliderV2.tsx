@@ -220,7 +220,7 @@ const MovieSlider: React.FC<MovieSliderProps> = () => {
                                 className={clsx(
                                     'basis-1/2 py-2 border-l-inherit border-l-2 max-[480px]:text-[12px]',
                                     {
-                                        'dark:bg-red-netflix bg-[#ef4444] text-[#FFECD7] dark:text-white':
+                                        'dark:bg-red-netflix bg-[#ef4444] text-white dark:text-white':
                                             id === currentSliderId,
                                         '!border-l-0': index === 0,
                                     },
