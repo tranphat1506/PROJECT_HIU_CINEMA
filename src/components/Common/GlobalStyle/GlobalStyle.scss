@@ -32,6 +32,11 @@
             }
         }
     }
+    #comment-list {
+        .MuiBreadcrumbs-separator {
+            color: #fff;
+        }
+    }
 }
 #movie-detail {
     .MuiBreadcrumbs-separator {

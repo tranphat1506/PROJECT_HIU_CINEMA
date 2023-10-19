@@ -1,31 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, MouseEventHandler } from 'react';
 import { PageProps } from '../Home/Page';
 import { Link, useLocation, useParams } from 'react-router-dom';
-import {
-    Breadcrumbs,
-    Divider,
-    IconButton,
-    Rating,
-    Stack,
-    Typography,
-} from '@mui/material';
-import { RxDotFilled } from 'react-icons/rx';
+import { Divider, IconButton, Stack } from '@mui/material';
 import { AiOutlineClockCircle } from 'react-icons/ai';
-import {
-    BiDislike,
-    BiLike,
-    BiMoviePlay,
-    BiPlayCircle,
-    BiSolidDislike,
-    BiSolidLike,
-} from 'react-icons/bi';
+import { BiMoviePlay, BiPlayCircle } from 'react-icons/bi';
 import { IoEarth, IoPlayCircle } from 'react-icons/io5';
-import { BsStar, BsStarFill } from 'react-icons/bs';
 import { HiMiniTicket } from 'react-icons/hi2';
-import { PiDotBold } from 'react-icons/pi';
 import useLanguage from '@/hooks/useLanguage';
 import { FaAngleRight } from 'react-icons/fa6';
-import { AvatarByString } from '@/components/Common/Avatar';
+import MovieComment from '@/components/Movie/MovieComment';
+import RatingButton, {
+    MovieRatingButton,
+} from '@/components/Movie/RatingButton';
+import MovieRating from '@/components/Movie/MovieRating';
 interface MovieDetailPageProps extends PageProps {}
 const MovieDetailPage: React.FC<MovieDetailPageProps> = ({
     title = 'Phim - HIU Cinemas',
@@ -40,6 +27,17 @@ const MovieDetailPage: React.FC<MovieDetailPageProps> = ({
     const exploreAll_Text = text('explore_all');
     const buyTicket_Text = text('buy_ticket');
     const watchTrailer_Text = text('watch_trailer') || text('unblock_trailer');
+
+    const [userRate, setUserRate] = useState<number>(0);
+    const handleSetUserRate =
+        (value: number) =>
+        (e?: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+            setUserRate(value);
+        };
+    const [ratingMenu, setRatingMenu] = useState(false);
+    const toggleRatingMenu = (open: boolean) => (e?: React.MouseEvent) => {
+        setRatingMenu(open);
+    };
     return (
         <>
             <div
@@ -57,42 +55,20 @@ const MovieDetailPage: React.FC<MovieDetailPageProps> = ({
                                 <div className="uppercase font-MP_Bold text-base dark:text-[#B8B8B8] text-[#3b3b3b] w-max">
                                     HCine Rating
                                 </div>
-                                <span className="inline-flex items-center gap-2 cursor-pointer dark:hover:bg-[#ffffff1e] hover:bg-[#7373731f] px-2 py-[1px] rounded">
-                                    <BsStarFill className="text-[#ffce65] text-2xl" />
-                                    <span className="flex flex-col">
-                                        <span>
-                                            <span className="text-xl font-MP_Bold">
-                                                5.2
-                                            </span>
-                                            <span className="text-base dark:text-[#ffffffb2] text-[#6a6a6a]">
-                                                /10
-                                            </span>
-                                        </span>
-                                        <span className="leading-none text-base dark:text-[#ffffffb2] text-[#6a6a6a]">
-                                            2k
-                                        </span>
-                                    </span>
-                                </span>
+                                <MovieRatingButton
+                                    href="#movie-review"
+                                    rate={7}
+                                    totalRates={12}
+                                />
                             </span>
                             <span className="inline-flex flex-col items-center">
                                 <div className="uppercase font-MP_Bold text-base dark:text-[#ffffffb2] text-[#3b3b3b] w-max">
                                     Your Rating
                                 </div>
-                                <span className="inline-flex items-center gap-2 cursor-pointer dark:hover:bg-[#ffffff1e] hover:bg-[#7373731f] px-2 py-[1px] rounded h-full">
-                                    {/* <BsStarFill className="text-[#8165ff] text-xl" />
-                                    <span>
-                                        <span className="text-xl font-MP_Bold">5.2</span>
-                                        <span className="text-base dark:text-[#ffffffb2] text-[#6a6a6a]">
-                                            /10
-                                        </span>
-                                    </span> */}
-                                    <BsStar className="text-[#8165ff] text-2xl" />
-                                    <span>
-                                        <span className="text-xl text-[#8165ff]">
-                                            Rate
-                                        </span>
-                                    </span>
-                                </span>
+                                <RatingButton
+                                    handleOpenMenu={toggleRatingMenu(true)}
+                                    rate={userRate}
+                                />
                             </span>
                         </span>
                     </div>
@@ -166,40 +142,16 @@ const MovieDetailPage: React.FC<MovieDetailPageProps> = ({
                             </span>
                             {/* Rating */}
                             <span className="my-3 gap-8 md:hidden inline-flex">
-                                <span className="inline-flex items-center gap-2 cursor-pointer dark:hover:bg-[#ffffff1e] hover:bg-[#7373731f] px-2 py-[1px] rounded">
-                                    <BsStarFill className="text-[#ffce65] text-xl" />
-                                    <span className="inline-flex flex-row items-center">
-                                        <span>
-                                            <span className="text-xl font-MP_Bold">
-                                                5.2
-                                            </span>
-                                            <span className="text-base dark:text-[#ffffffb2] text-[#6a6a6a]">
-                                                /10
-                                            </span>
-                                        </span>
-                                        <span className="flex items-center">
-                                            <PiDotBold className="h-full dark:text-[#ffffffb2] text-[#6a6a6a]" />
-                                        </span>
-                                        <span className="text-base dark:text-[#ffffffb2] text-[#6a6a6a]">
-                                            2k
-                                        </span>
-                                    </span>
-                                </span>
-                                <span className="inline-flex items-center gap-2 cursor-pointer dark:hover:bg-[#ffffff1e] hover:bg-[#7373731f] px-2 py-[1px] rounded">
-                                    <BsStarFill className="text-[#8165ff] text-xl" />
-                                    <span>
-                                        <span className="text-xl font-MP_Bold">
-                                            5.2
-                                        </span>
-                                        <span className="text-base dark:text-[#ffffffb2] text-[#6a6a6a]">
-                                            /10
-                                        </span>
-                                    </span>
-                                    {/* <BsStar className="text-[#8165ff] text-xl" />
-                                    <span>
-                                        <span className="text-xl text-[#8165ff]">Rate</span>
-                                    </span> */}
-                                </span>
+                                <MovieRatingButton
+                                    direction="row"
+                                    href="#movie-review"
+                                    rate={7}
+                                    totalRates={12}
+                                />
+                                <RatingButton
+                                    handleOpenMenu={toggleRatingMenu(true)}
+                                    rate={userRate}
+                                />
                             </span>
                             <span className="my-3 dark:!text-[#ffffffb2] flex flex-wrap-reverse gap-x-3 gap-y-1 lg:w-4/6 w-full">
                                 {[
@@ -294,187 +246,52 @@ const MovieDetailPage: React.FC<MovieDetailPageProps> = ({
                             rowGap={'1rem'}
                             marginY={'1rem'}
                         >
-                            <div className="flex flex-col py-2 px-4 shadow-xl rounded-xl border-[1px] lg:w-3/5 w-full flex-wrap min-w-fit">
-                                <div className="flex flex-row flex-wrap justify-between">
-                                    <div className="inline-flex felx-row items-center w-max gap-3">
-                                        <AvatarByString stringName="Tran Phat" />
-                                        <Breadcrumbs separator={<PiDotBold />}>
-                                            <Typography className="!font-MP_Medium sm:!text-base !text-sm">
-                                                Tran Phat
-                                            </Typography>
-                                            <Typography className="!font-MP_Medium sm:!text-base !text-sm">
-                                                30/09/2023
-                                            </Typography>
-                                        </Breadcrumbs>
-                                    </div>
-                                    <div className="inline-flex items-center gap-2 px-2 py-[1px] rounded">
-                                        <BsStarFill className="text-[#ffce65] text-xl" />
-                                        <span className="inline-flex flex-row items-center">
-                                            <span>
-                                                <span className="sm:text-xl text-base font-MP_Bold">
-                                                    5.2
-                                                </span>
-                                                <span className="sm:text-base text-xs dark:text-[#ffffffb2] text-[#6a6a6a]">
-                                                    /10
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                </div>
-                                <span className="inline-flex w-auto text-[#3b3b3b] p-2">
-                                    Phim rat hay!! Phim rat hay!! Phim rat hay!!
-                                    Phim rat hay!!Phim rat hay!! Phim rat hay!!
-                                    Phim rat hay!! Phim rat hay!!Phim rat hay!!
-                                    Phim rat hay!! Phim rat hay!! Phim rat
-                                    hay!!Phim rat hay!! Phim rat hay!! Phim rat
-                                    hay!! Phim rat hay!!Phim rat hay!! Phim rat
-                                    hay!! Phim rat hay!! Phim rat hay!!
-                                </span>
-                                <Stack gap={'1.25rem'} direction={'row'}>
-                                    <Stack
-                                        direction={'row'}
-                                        alignItems={'center'}
-                                        display={'inline-flex'}
-                                    >
-                                        <IconButton size="medium">
-                                            {1 ? <BiLike /> : <BiSolidLike />}
-                                        </IconButton>
-                                        <span className="text-xs">200</span>
-                                    </Stack>
-                                    <Stack
-                                        direction={'row'}
-                                        alignItems={'center'}
-                                        display={'inline-flex'}
-                                    >
-                                        <IconButton size="medium">
-                                            {1 ? (
-                                                <BiDislike />
-                                            ) : (
-                                                <BiSolidDislike />
-                                            )}
-                                        </IconButton>
-                                        <span className="text-xs">200</span>
-                                    </Stack>
-                                </Stack>
-                            </div>
-                            <div className="flex flex-col py-2 px-4 shadow-xl rounded-xl border-[1px] lg:w-3/5 w-full flex-wrap min-w-fit">
-                                <div className="flex flex-row flex-wrap justify-between">
-                                    <div className="inline-flex felx-row items-center w-max gap-3">
-                                        <AvatarByString stringName="Tran Phat" />
-                                        <Breadcrumbs separator={<PiDotBold />}>
-                                            <Typography className="!font-MP_Medium sm:!text-base !text-sm">
-                                                Tran Phat
-                                            </Typography>
-                                            <Typography className="!font-MP_Medium sm:!text-base !text-sm">
-                                                30/09/2023
-                                            </Typography>
-                                        </Breadcrumbs>
-                                    </div>
-                                    <div className="inline-flex items-center gap-2 px-2 py-[1px] rounded">
-                                        <BsStarFill className="text-[#ffce65] text-xl" />
-                                        <span className="inline-flex flex-row items-center">
-                                            <span>
-                                                <span className="sm:text-xl text-base font-MP_Bold">
-                                                    5.2
-                                                </span>
-                                                <span className="sm:text-base text-xs dark:text-[#ffffffb2] text-[#6a6a6a]">
-                                                    /10
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                </div>
-                                <span className="inline-flex w-auto text-[#3b3b3b] p-2">
-                                    Phim rat hay!!
-                                </span>
-                                <Stack gap={'1.25rem'} direction={'row'}>
-                                    <Stack
-                                        direction={'row'}
-                                        alignItems={'center'}
-                                        display={'inline-flex'}
-                                    >
-                                        <IconButton size="medium">
-                                            {1 ? <BiLike /> : <BiSolidLike />}
-                                        </IconButton>
-                                        <span className="text-xs">200</span>
-                                    </Stack>
-                                    <Stack
-                                        direction={'row'}
-                                        alignItems={'center'}
-                                        display={'inline-flex'}
-                                    >
-                                        <IconButton size="medium">
-                                            {1 ? (
-                                                <BiDislike />
-                                            ) : (
-                                                <BiSolidDislike />
-                                            )}
-                                        </IconButton>
-                                        <span className="text-xs">200</span>
-                                    </Stack>
-                                </Stack>
-                            </div>
-                            <div className="flex flex-col py-2 px-4 shadow-xl rounded-xl border-[1px] lg:w-3/5 w-full flex-wrap min-w-fit">
-                                <div className="flex flex-row flex-wrap justify-between">
-                                    <div className="inline-flex felx-row items-center w-max gap-3">
-                                        <AvatarByString stringName="Tran Phat" />
-                                        <Breadcrumbs separator={<PiDotBold />}>
-                                            <Typography className="!font-MP_Medium sm:!text-base !text-sm">
-                                                Tran Phat
-                                            </Typography>
-                                            <Typography className="!font-MP_Medium sm:!text-base !text-sm">
-                                                30/09/2023
-                                            </Typography>
-                                        </Breadcrumbs>
-                                    </div>
-                                    <div className="inline-flex items-center gap-2 px-2 py-[1px] rounded">
-                                        <BsStarFill className="text-[#ffce65] text-xl" />
-                                        <span className="inline-flex flex-row items-center">
-                                            <span>
-                                                <span className="sm:text-xl text-base font-MP_Bold">
-                                                    5.2
-                                                </span>
-                                                <span className="sm:text-base text-xs dark:text-[#ffffffb2] text-[#6a6a6a]">
-                                                    /10
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                </div>
-                                <span className="inline-flex w-auto text-[#3b3b3b] p-2">
-                                    Phim rat hay!!
-                                </span>
-                                <Stack gap={'1.25rem'} direction={'row'}>
-                                    <Stack
-                                        direction={'row'}
-                                        alignItems={'center'}
-                                        display={'inline-flex'}
-                                    >
-                                        <IconButton size="medium">
-                                            {1 ? <BiLike /> : <BiSolidLike />}
-                                        </IconButton>
-                                        <span className="text-xs">200</span>
-                                    </Stack>
-                                    <Stack
-                                        direction={'row'}
-                                        alignItems={'center'}
-                                        display={'inline-flex'}
-                                    >
-                                        <IconButton size="medium">
-                                            {1 ? (
-                                                <BiDislike />
-                                            ) : (
-                                                <BiSolidDislike />
-                                            )}
-                                        </IconButton>
-                                        <span className="text-xs">200</span>
-                                    </Stack>
-                                </Stack>
-                            </div>
+                            <MovieComment
+                                author={{
+                                    avatar_url:
+                                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUxftucoAyxyooI4z_vRBoQE1-OmOwzjNIBA&usqp=CAU',
+                                    username: 'meongungoc123',
+                                }}
+                                comment_created_at="12/09/2023"
+                                like_comment={1000}
+                                dislike_comment={20}
+                                rating_star={5}
+                                comment_text="Phim rất hay ạ!! Mua vé trên HIU còn đc giảm 30k ^^"
+                            />
+                            <MovieComment
+                                author={{
+                                    avatar_url:
+                                        'https://i.pinimg.com/1200x/c0/29/5a/c0295a690ba4e121e0ab092279d8ed6b.jpg',
+                                    username: 'phatdeptraiqua',
+                                }}
+                                comment_created_at="12/09/2023"
+                                like_comment={300}
+                                dislike_comment={19}
+                                rating_star={4.5}
+                                comment_text="Phim rất hay ạ rất đáng xem mọi người ơi. Nam chính đẹp trai như mình vậy."
+                            />
+                            <MovieComment
+                                author={{
+                                    avatar_url:
+                                        'https://assets-prd.ignimgs.com/2022/09/12/odd-taxi-blogroll-1663003695432.jpg',
+                                    username: 'thichxemphim11',
+                                }}
+                                comment_created_at="12/09/2023"
+                                like_comment={10}
+                                dislike_comment={8}
+                                rating_star={2}
+                                comment_text="Phim quá chán !!!!"
+                            />
                         </Stack>
                     </div>
                 </div>
             </div>
+            <MovieRating
+                open={ratingMenu}
+                userRate={userRate}
+                handleClose={toggleRatingMenu(false)}
+                handleSetUserRate={handleSetUserRate}
+            />
         </>
     );
 };
