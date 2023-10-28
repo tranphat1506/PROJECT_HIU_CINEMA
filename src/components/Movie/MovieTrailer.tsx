@@ -7,7 +7,7 @@ import { TbDeviceTv, TbDeviceTvOff } from 'react-icons/tb';
 import { IoInformationCircle } from 'react-icons/io5';
 import useLanguage from '@/hooks/useLanguage';
 import { HiMiniTicket } from 'react-icons/hi2';
-import { MovieItem } from './MovieSlider';
+import { MovieItem } from './MovieSliderV2';
 import { Link } from 'react-router-dom';
 import { RiFullscreenFill } from 'react-icons/ri';
 

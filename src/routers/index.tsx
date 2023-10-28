@@ -1,5 +1,5 @@
 import { HomeLayout, HomePage } from '../pages/Home';
-import { BuyTicketLayout, BuyTicketPage } from '@/pages/BuyTicket';
+import { BuyTicketLayout, BuyTicketPage, ChooseChair } from '@/pages/BuyTicket';
 import { MoviePage, MovieLayout } from '@/pages/Movie';
 import { MovieDetailPage, MovieDetailLayout } from '@/pages/MovieDetail';
 
@@ -32,6 +32,12 @@ const publicRoutes: Router = [
     {
         path: '/buy-ticket',
         page: BuyTicketPage,
+        layout: BuyTicketLayout,
+        props: { headerProps: { autoHide: false, fixed: false } },
+    },
+    {
+        path: '/buy-ticket/:id',
+        page: ChooseChair,
         layout: BuyTicketLayout,
         props: { headerProps: { autoHide: false, fixed: false } },
     },

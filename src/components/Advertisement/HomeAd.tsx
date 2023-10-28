@@ -1,7 +1,7 @@
 import { CircularProgress, Dialog, IconButton } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { IoMdClose } from 'react-icons/io';
-import { MovieItem } from '../Movie/MovieSlider';
+import { MovieItem } from '../Movie/MovieSliderV2';
 import { Link } from 'react-router-dom';
 import { HiMiniTicket } from 'react-icons/hi2';
 import { IoInformationCircle, IoPlayCircle } from 'react-icons/io5';
@@ -43,8 +43,9 @@ const HomeAd: React.FC<HomeAdProps> = ({
     useEffect(() => {
         const id = setTimeout(() => {
             const movieList = MovieSliderApi.currentShowing.movieList;
-            const randomMovieToAd: MovieItem =
-                movieList[randomIntFromInterval(0, movieList.length - 1)];
+            const randomMovieToAd: MovieItem = movieList[
+                randomIntFromInterval(0, movieList.length - 1)
+            ] as MovieItem;
             setAdDetails(randomMovieToAd);
             clearTimeout(id);
         }, 2000);
@@ -83,7 +84,9 @@ const HomeAd: React.FC<HomeAdProps> = ({
                         {adTimeLeft === 0 ? (
                             <IoMdClose />
                         ) : (
-                            <span className="text-sm">{adTimeLeft}</span>
+                            <span className="text-sm w-6 h-6 font-MP_Medium">
+                                {adTimeLeft}
+                            </span>
                         )}
                     </IconButton>
                 </div>

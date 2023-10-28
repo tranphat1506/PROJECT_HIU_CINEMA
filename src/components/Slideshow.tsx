@@ -100,7 +100,7 @@ const Slideshow = () => {
                                 <img
                                     src={item.poster_url}
                                     alt={`Slide item id ${index}`}
-                                    className="w-screen h-full object-contain max-sm:!scale-100"
+                                    className="w-screen max-w-[1700px] h-full object-contain max-sm:!scale-100"
                                     style={{
                                         transform: `scale(${
                                             item.poster_scale || 1

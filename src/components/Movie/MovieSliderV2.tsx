@@ -39,8 +39,17 @@ export type MovieItem = {
     movieScale: string;
     movieTitle: string;
     movieTitleImgSrc: string;
-    movieType: string;
+    movieType: string[];
     movieDescription: string;
+    movieDetail?: {
+        duration?: string;
+        region?: string;
+        language?: string;
+        actors?: string[];
+        directors?: string[];
+        opening_day?: string;
+        have_sub?: boolean;
+    };
 };
 export const MovieSliderSkeleton = () => {
     return (
@@ -109,7 +118,7 @@ const MovieSlider: React.FC<MovieSliderProps> = () => {
                         slider.movieList.length * 3,
                     ),
                     currentSlide: 0,
-                };
+                } as TypeSlider;
             });
             sliderIdList.current = cloneSliderIdList;
             // set sliders state

@@ -1,7 +1,7 @@
 import { Skeleton } from '@mui/material';
 import clsx from 'clsx';
 import { memo, useEffect } from 'react';
-import { MovieItem } from './MovieSlider';
+import { MovieItem } from './MovieSliderV2';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { HiMiniTicket } from 'react-icons/hi2';
 import { IoPlayCircle } from 'react-icons/io5';
@@ -62,6 +62,7 @@ const SlideItem: React.FC<SlideItemProps> = ({ id, movieApi }) => {
                         </Link>
                         <Link
                             to={movieApi.detailMovieSrc}
+                            state={{ movieItem: movieApi }}
                             className="cursor-pointer font-MP_Regular md:px-4 px-2 mx-auto md:text-base text-xs max-[480px]:text-base hover:underline flex justify-center items-center gap-2 mb-4"
                         >
                             <span>{exploreAll_Text}</span>

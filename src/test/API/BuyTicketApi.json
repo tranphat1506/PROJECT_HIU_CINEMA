@@ -1,24 +1,640 @@
 {
-    "pages_display": {
-        "en": {
-            "0": {
-                "id": "by_cinema",
-                "title": "Choose by cinema"
+    "movie_dayofweek": {
+        "en": [
+            {
+                "id": "1",
+                "date": {
+                    "day": "Thu",
+                    "date": "19",
+                    "month": "10"
+                },
+                "movies": [
+                    {
+                        "posterSrc": "/19to20/19to20-poster.jpg",
+                        "movieTitle": "Nineteen to twenty",
+                        "movieType": ["romance"],
+                        "schedule": [
+                            {
+                                "id": "00001",
+                                "time": "11:00"
+                            },
+                            {
+                                "id": "00002",
+                                "time": "12:00"
+                            },
+                            {
+                                "id": "00003",
+                                "time": "13:00"
+                            },
+                            {
+                                "id": "00004",
+                                "time": "15:30"
+                            }
+                        ]
+                    },
+                    {
+                        "posterSrc": "/thenun2/thenun2-poster.jpg",
+                        "movieTitle": "The Nun II",
+                        "movieType": ["horror"],
+                        "schedule": [
+                            {
+                                "id": "00011",
+                                "time": "11:00"
+                            },
+                            {
+                                "id": "00012",
+                                "time": "12:00"
+                            },
+                            {
+                                "id": "00013",
+                                "time": "13:00"
+                            },
+                            {
+                                "id": "00014",
+                                "time": "15:30"
+                            }
+                        ]
+                    },
+                    {
+                        "posterSrc": "/pastlives/pastlives-poster.webp",
+                        "movieType": ["romance", "korea"],
+                        "movieTitle": "Past Lives",
+                        "schedule": [
+                            {
+                                "id": "00021",
+                                "time": "15:30"
+                            },
+                            {
+                                "id": "00022",
+                                "time": "17:00"
+                            },
+                            {
+                                "id": "00023",
+                                "time": "20:00"
+                            },
+                            {
+                                "id": "00024",
+                                "time": "21:30"
+                            }
+                        ]
+                    }
+                ]
             },
-            "1": {
-                "id": "by_movie",
-                "title": "Choose by movie"
-            }
-        },
-        "vn": {
-            "0": {
-                "id": "by_cinema",
-                "title": "Chọn theo rạp"
+            {
+                "id": "2",
+                "date": {
+                    "day": "Fri",
+                    "date": "20",
+                    "month": "10"
+                },
+                "movies": [
+                    {
+                        "posterSrc": "/thenun2/thenun2-poster.jpg",
+                        "movieTitle": "The Nun II",
+                        "movieType": ["horror"],
+                        "schedule": [
+                            {
+                                "id": "00001",
+                                "time": "11:00"
+                            },
+                            {
+                                "id": "00002",
+                                "time": "12:00"
+                            },
+                            {
+                                "id": "00003",
+                                "time": "13:00"
+                            },
+                            {
+                                "id": "00004",
+                                "time": "15:30"
+                            }
+                        ]
+                    },
+                    {
+                        "posterSrc": "/pastlives/pastlives-poster.webp",
+                        "movieType": ["romance"],
+                        "movieTitle": "Past Lives",
+                        "schedule": [
+                            {
+                                "id": "00011",
+                                "time": "11:00"
+                            },
+                            {
+                                "id": "00012",
+                                "time": "12:00"
+                            },
+                            {
+                                "id": "00013",
+                                "time": "13:00"
+                            },
+                            {
+                                "id": "00014",
+                                "time": "15:30"
+                            }
+                        ]
+                    },
+                    {
+                        "posterSrc": "/island/island-poster.jpg",
+                        "movieType": ["action", "horror", "korea"],
+                        "movieTitle": "Island",
+                        "schedule": [
+                            {
+                                "id": "00021",
+                                "time": "15:30"
+                            },
+                            {
+                                "id": "00022",
+                                "time": "17:00"
+                            },
+                            {
+                                "id": "00023",
+                                "time": "20:00"
+                            },
+                            {
+                                "id": "00024",
+                                "time": "21:30"
+                            }
+                        ]
+                    }
+                ]
             },
-            "1": {
-                "id": "by_movie",
-                "title": "Chọn theo phim"
+            {
+                "id": "3",
+                "date": {
+                    "day": "Sat",
+                    "date": "19",
+                    "month": "10"
+                },
+                "movies": [
+                    {
+                        "posterSrc": "/19to20/19to20-poster.jpg",
+                        "movieTitle": "Nineteen to twenty",
+                        "movieType": ["romance"],
+                        "schedule": [
+                            {
+                                "id": "00021",
+                                "time": "15:30"
+                            },
+                            {
+                                "id": "00022",
+                                "time": "17:00"
+                            },
+                            {
+                                "id": "00023",
+                                "time": "20:00"
+                            },
+                            {
+                                "id": "00024",
+                                "time": "21:30"
+                            }
+                        ]
+                    },
+                    {
+                        "posterSrc": "/thenun2/thenun2-poster.jpg",
+                        "movieTitle": "The Nun II",
+                        "movieType": ["horror"],
+                        "schedule": [
+                            {
+                                "id": "00021",
+                                "time": "15:30"
+                            },
+                            {
+                                "id": "00022",
+                                "time": "17:00"
+                            },
+                            {
+                                "id": "00023",
+                                "time": "20:00"
+                            },
+                            {
+                                "id": "00024",
+                                "time": "21:30"
+                            }
+                        ]
+                    },
+                    {
+                        "posterSrc": "/pastlives/pastlives-poster.webp",
+                        "movieType": ["romance", "korea"],
+                        "movieTitle": "Past Lives",
+                        "schedule": [
+                            {
+                                "id": "00021",
+                                "time": "15:30"
+                            },
+                            {
+                                "id": "00022",
+                                "time": "17:00"
+                            },
+                            {
+                                "id": "00023",
+                                "time": "20:00"
+                            },
+                            {
+                                "id": "00024",
+                                "time": "21:30"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "4",
+                "date": {
+                    "day": "Sun",
+                    "date": "20",
+                    "month": "10"
+                },
+                "movies": [
+                    {
+                        "posterSrc": "/thenun2/thenun2-poster.jpg",
+                        "movieTitle": "The Nun II",
+                        "movieType": ["horror"],
+                        "schedule": [
+                            {
+                                "id": "00021",
+                                "time": "15:30"
+                            },
+                            {
+                                "id": "00022",
+                                "time": "17:00"
+                            },
+                            {
+                                "id": "00023",
+                                "time": "20:00"
+                            },
+                            {
+                                "id": "00024",
+                                "time": "21:30"
+                            }
+                        ]
+                    },
+                    {
+                        "posterSrc": "/pastlives/pastlives-poster.webp",
+                        "movieType": ["romance"],
+                        "movieTitle": "Kiếp Nhân Duyên",
+                        "schedule": [
+                            {
+                                "id": "00021",
+                                "time": "15:30"
+                            },
+                            {
+                                "id": "00022",
+                                "time": "17:00"
+                            },
+                            {
+                                "id": "00023",
+                                "time": "20:00"
+                            },
+                            {
+                                "id": "00024",
+                                "time": "21:30"
+                            }
+                        ]
+                    },
+                    {
+                        "posterSrc": "/island/island-poster.jpg",
+                        "movieType": ["action", "horror", "korea"],
+                        "movieTitle": "Island: Đảo bí ẩn",
+                        "schedule": [
+                            {
+                                "id": "00021",
+                                "time": "15:30"
+                            },
+                            {
+                                "id": "00022",
+                                "time": "17:00"
+                            },
+                            {
+                                "id": "00023",
+                                "time": "20:00"
+                            },
+                            {
+                                "id": "00024",
+                                "time": "21:30"
+                            }
+                        ]
+                    }
+                ]
             }
-        }
+        ],
+        "vn": [
+            {
+                "id": "1",
+                "date": {
+                    "day": "Thu",
+                    "date": "19",
+                    "month": "10"
+                },
+                "movies": [
+                    {
+                        "posterSrc": "/19to20/19to20-poster.jpg",
+                        "movieTitle": "Mười chín sang hai mươi",
+                        "movieType": ["romance"],
+                        "schedule": [
+                            {
+                                "id": "00001",
+                                "time": "11:00"
+                            },
+                            {
+                                "id": "00002",
+                                "time": "12:00"
+                            },
+                            {
+                                "id": "00003",
+                                "time": "13:00"
+                            },
+                            {
+                                "id": "00004",
+                                "time": "15:30"
+                            }
+                        ]
+                    },
+                    {
+                        "posterSrc": "/thenun2/thenun2-poster.jpg",
+                        "movieTitle": "The Nun II",
+                        "movieType": ["horror"],
+                        "schedule": [
+                            {
+                                "id": "00011",
+                                "time": "11:00"
+                            },
+                            {
+                                "id": "00012",
+                                "time": "12:00"
+                            },
+                            {
+                                "id": "00013",
+                                "time": "13:00"
+                            },
+                            {
+                                "id": "00014",
+                                "time": "15:30"
+                            }
+                        ]
+                    },
+                    {
+                        "posterSrc": "/pastlives/pastlives-poster.webp",
+                        "movieType": ["romance", "korea"],
+                        "movieTitle": "Kiếp Nhân Duyên",
+                        "schedule": [
+                            {
+                                "id": "00021",
+                                "time": "15:30"
+                            },
+                            {
+                                "id": "00022",
+                                "time": "17:00"
+                            },
+                            {
+                                "id": "00023",
+                                "time": "20:00"
+                            },
+                            {
+                                "id": "00024",
+                                "time": "21:30"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "2",
+                "date": {
+                    "day": "Fri",
+                    "date": "20",
+                    "month": "10"
+                },
+                "movies": [
+                    {
+                        "posterSrc": "/thenun2/thenun2-poster.jpg",
+                        "movieTitle": "The Nun II",
+                        "movieType": ["horror"],
+                        "schedule": [
+                            {
+                                "id": "00001",
+                                "time": "11:00"
+                            },
+                            {
+                                "id": "00002",
+                                "time": "12:00"
+                            },
+                            {
+                                "id": "00003",
+                                "time": "13:00"
+                            },
+                            {
+                                "id": "00004",
+                                "time": "15:30"
+                            }
+                        ]
+                    },
+                    {
+                        "posterSrc": "/pastlives/pastlives-poster.webp",
+                        "movieType": ["romance"],
+                        "movieTitle": "Kiếp Nhân Duyên",
+                        "schedule": [
+                            {
+                                "id": "00011",
+                                "time": "11:00"
+                            },
+                            {
+                                "id": "00012",
+                                "time": "12:00"
+                            },
+                            {
+                                "id": "00013",
+                                "time": "13:00"
+                            },
+                            {
+                                "id": "00014",
+                                "time": "15:30"
+                            }
+                        ]
+                    },
+                    {
+                        "posterSrc": "/island/island-poster.jpg",
+                        "movieType": ["action", "horror", "korea"],
+                        "movieTitle": "Island: Đảo bí ẩn",
+                        "schedule": [
+                            {
+                                "id": "00021",
+                                "time": "15:30"
+                            },
+                            {
+                                "id": "00022",
+                                "time": "17:00"
+                            },
+                            {
+                                "id": "00023",
+                                "time": "20:00"
+                            },
+                            {
+                                "id": "00024",
+                                "time": "21:30"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "3",
+                "date": {
+                    "day": "Sat",
+                    "date": "19",
+                    "month": "10"
+                },
+                "movies": [
+                    {
+                        "posterSrc": "/19to20/19to20-poster.jpg",
+                        "movieTitle": "Mười chín sang hai mươi",
+                        "movieType": ["romance"],
+                        "schedule": [
+                            {
+                                "id": "00021",
+                                "time": "15:30"
+                            },
+                            {
+                                "id": "00022",
+                                "time": "17:00"
+                            },
+                            {
+                                "id": "00023",
+                                "time": "20:00"
+                            },
+                            {
+                                "id": "00024",
+                                "time": "21:30"
+                            }
+                        ]
+                    },
+                    {
+                        "posterSrc": "/thenun2/thenun2-poster.jpg",
+                        "movieTitle": "The Nun II",
+                        "movieType": ["horror"],
+                        "schedule": [
+                            {
+                                "id": "00021",
+                                "time": "15:30"
+                            },
+                            {
+                                "id": "00022",
+                                "time": "17:00"
+                            },
+                            {
+                                "id": "00023",
+                                "time": "20:00"
+                            },
+                            {
+                                "id": "00024",
+                                "time": "21:30"
+                            }
+                        ]
+                    },
+                    {
+                        "posterSrc": "/pastlives/pastlives-poster.webp",
+                        "movieType": ["romance", "korea"],
+                        "movieTitle": "Kiếp Nhân Duyên",
+                        "schedule": [
+                            {
+                                "id": "00021",
+                                "time": "15:30"
+                            },
+                            {
+                                "id": "00022",
+                                "time": "17:00"
+                            },
+                            {
+                                "id": "00023",
+                                "time": "20:00"
+                            },
+                            {
+                                "id": "00024",
+                                "time": "21:30"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "4",
+                "date": {
+                    "day": "Sun",
+                    "date": "20",
+                    "month": "10"
+                },
+                "movies": [
+                    {
+                        "posterSrc": "/thenun2/thenun2-poster.jpg",
+                        "movieTitle": "The Nun II",
+                        "movieType": ["horror"],
+                        "schedule": [
+                            {
+                                "id": "00021",
+                                "time": "15:30"
+                            },
+                            {
+                                "id": "00022",
+                                "time": "17:00"
+                            },
+                            {
+                                "id": "00023",
+                                "time": "20:00"
+                            },
+                            {
+                                "id": "00024",
+                                "time": "21:30"
+                            }
+                        ]
+                    },
+                    {
+                        "posterSrc": "/pastlives/pastlives-poster.webp",
+                        "movieType": ["romance"],
+                        "movieTitle": "Kiếp Nhân Duyên",
+                        "schedule": [
+                            {
+                                "id": "00021",
+                                "time": "15:30"
+                            },
+                            {
+                                "id": "00022",
+                                "time": "17:00"
+                            },
+                            {
+                                "id": "00023",
+                                "time": "20:00"
+                            },
+                            {
+                                "id": "00024",
+                                "time": "21:30"
+                            }
+                        ]
+                    },
+                    {
+                        "posterSrc": "/island/island-poster.jpg",
+                        "movieType": ["action", "horror", "korea"],
+                        "movieTitle": "Island: Đảo bí ẩn",
+                        "schedule": [
+                            {
+                                "id": "00021",
+                                "time": "15:30"
+                            },
+                            {
+                                "id": "00022",
+                                "time": "17:00"
+                            },
+                            {
+                                "id": "00023",
+                                "time": "20:00"
+                            },
+                            {
+                                "id": "00024",
+                                "time": "21:30"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 }

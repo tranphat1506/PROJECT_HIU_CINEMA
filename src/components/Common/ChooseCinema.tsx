@@ -27,7 +27,14 @@ export type CinemaType = {
     google_map_link?: string;
 } | null;
 const DEFAULT_REGION = 'vietnam';
-const ChooseCinema = () => {
+type ChooseCinemaProps = {
+    autoHide?: boolean;
+    autoHideLocation?: boolean;
+};
+const ChooseCinema: React.FC<ChooseCinemaProps> = ({
+    autoHide = false,
+    autoHideLocation = true,
+}) => {
     const [CinemasPlacesApi, setCinemasPlacesApi] = useState<any>();
     const [CitiesApi, setCitiesApi] = useState<any>();
     // Fetch Api
@@ -58,7 +65,7 @@ const ChooseCinema = () => {
         if (!CinemasPlacesApi) return;
         if (setting?.cinemaLocation && CinemasPlacesApi[setting.cinemaLocation])
             setCinema(CinemasPlacesApi[setting.cinemaLocation] as CinemaType);
-        else setOpenMenu(true);
+        else setOpenMenu(autoHide);
     }, [CinemasPlacesApi]);
 
     const [cityId, setCityId] = useState<string>('all');
@@ -97,7 +104,12 @@ const ChooseCinema = () => {
             >
                 <span className="flex flex-row items-center flex-nowrap px-1">
                     <HiLocationMarker className="text-sm h-full" />
-                    <span className="lg:inline-block hidden px-1 text-lg">
+                    <span
+                        className={clsx('px-1 text-lg', {
+                            'lg:inline-block hidden': autoHideLocation,
+                            'inline-block': !autoHideLocation,
+                        })}
+                    >
                         {!cinema
                             ? choosingCinema2_Text
                             : cinema.name[

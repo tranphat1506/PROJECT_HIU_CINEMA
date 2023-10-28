@@ -1,3 +1,4 @@
+import useLanguage from '@/hooks/useLanguage';
 import clsx from 'clsx';
 import { BsStar, BsStarFill } from 'react-icons/bs';
 import { PiDotBold } from 'react-icons/pi';
@@ -12,7 +13,8 @@ const RatingButton: React.FC<RatingButtonProps> = ({
     rate,
     handleOpenMenu,
 }) => {
-    let rate_Text = 'Đánh giá';
+    let text = useLanguage();
+    let rate_Text = text('rating');
     return (
         <button
             onClick={handleOpenMenu}
@@ -54,8 +56,9 @@ const MovieRatingButton: React.FC<MovieRatingButtonProps> = ({
     totalRates,
     href = '',
 }) => {
-    let noneRating_Text = 'Chưa có đánh giá';
-    let rate_Text = 'Đánh giá';
+    let text = useLanguage();
+    let noneRating_Text = text('rating', 'none');
+    let rate_Text = text('rating');
     return (
         <a
             href={href}

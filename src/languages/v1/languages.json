@@ -131,7 +131,8 @@
             "text": "Movie",
             "current_showing": "Now Showing",
             "coming_soon": "Coming Soon",
-            "sneak_show": "Sneak Show"
+            "sneak_show": "Sneak Show",
+            "description": "Movie Description"
         },
         "cinema": {
             "text": "HIU Cinema"
@@ -144,6 +145,34 @@
         },
         "all": {
             "text": "All"
+        },
+        "rating": {
+            "text": "Rating",
+            "now": "Rating Now",
+            "your": "Your Rating",
+            "none": "No Rating Yet"
+        },
+        "actor": {
+            "text": "Actors"
+        },
+        "director": {
+            "text": "Directors"
+        },
+        "opening_day": {
+            "text": "Opening Day"
+        },
+        "movie_type": {
+            "text": "Movie Type",
+            "romance": "Romance",
+            "horror": "Horror",
+            "comedy": "Comedy",
+            "action": "Action",
+            "fiction": "Fiction",
+            "sci-fiction": "Sci-Fiction",
+            "korea": "Korea"
+        },
+        "not_update": {
+            "text": "Not Update"
         }
     },
     "vn": {
@@ -278,7 +307,8 @@
             "text": "Phim",
             "current_showing": "Đang chiếu",
             "coming_soon": "Sắp ra mắt",
-            "sneak_show": "Suất đặc biệt"
+            "sneak_show": "Suất đặc biệt",
+            "description": "Nội dung phim"
         },
         "cinema": {
             "text": "Rạp HIUCinema"
@@ -291,6 +321,34 @@
         },
         "all": {
             "text": "Tất cả"
+        },
+        "rating": {
+            "text": "Đánh giá",
+            "now": "Đánh giá ngay",
+            "your": "Đánh giá của bạn",
+            "none": "Chưa có đánh giá"
+        },
+        "actor": {
+            "text": "Diễn viên"
+        },
+        "director": {
+            "text": "Đạo diễn"
+        },
+        "opening_day": {
+            "text": "Ngày khởi chiếu"
+        },
+        "movie_type": {
+            "text": "Thể loại phim",
+            "romance": "Tình cảm",
+            "horror": "Kinh dị",
+            "comedy": "Hài kịch",
+            "action": "Hành động",
+            "fiction": "Viễn tưởng",
+            "sci-fiction": "Khoa học viễn tưởng",
+            "korea": "Hàn Quốc"
+        },
+        "not_update": {
+            "text": "Chưa cập nhật"
         }
     }
 }
